@@ -2,7 +2,7 @@
 layout: default
 modal-id: 1
 date: 2014-07-18
-img: cabin.png
+img: Movies.png
 alt: image-alt
 permalink: /projects/project-1/
 project-date: April 2014
