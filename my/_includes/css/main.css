@@ -37,7 +37,7 @@ h6 {
 }
 
 hr.star-light,
-hr.star-primary {
+hr.star-primary, hr.star-ic {
     margin: 25px auto 30px;
     padding: 0;
     max-width: 250px;
@@ -48,7 +48,7 @@ hr.star-primary {
 }
 
 hr.star-light:after,
-hr.star-primary:after {
+hr.star-primary:after, hr.star-ic:after {
     content: "\f005";
     display: inline-block;
     position: relative;
@@ -57,14 +57,16 @@ hr.star-primary:after {
     font-family: FontAwesome;
     font-size: 2em;
 }
+
+
 /* etoile */
 hr.star-light {
-    border-color: #000;
+    border-color: #{{ site.color.primary }};
 }
 
 hr.star-light:after {
     color: #000;
-    background-color: #{{ site.color.primary }};
+    background-color: #fff; /* couleur background etoile - should be same as background of header, intro et conclu */
 }
 
 hr.star-primary {
@@ -75,6 +77,18 @@ hr.star-primary:after {
     color: #{{ site.color.primary }}; /*couleur de l'etoile pr portofolio */
     background-color: #fff;
 }
+
+/* etoile intro conclu */
+hr.star-ic {
+    border-color: #{{ site.color.primary }}; /*couleur trait de l'etoile pr portofolio */
+}
+
+hr.star-ic:after {
+    color: #{{ site.color.primary }}; /*couleur de l'etoile pr portofolio */
+    background-color: #{{ site.color.primary-rgb }};
+}
+
+
 
 .img-centered {
     margin: 0 auto;

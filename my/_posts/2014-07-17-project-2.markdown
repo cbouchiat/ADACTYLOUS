@@ -3,7 +3,7 @@ layout: default
 modal-id: 2
 date: 2014-07-17
 img: Actors.png
-alt: image-alt
+alt: cover2
 permalink: /projects/project-2/
 project-date: April 2014
 client: Start Bootstrap

@@ -3,10 +3,12 @@ layout: default
 modal-id: 1
 date: 2014-07-18
 img: Movies.png
-alt: image-alt
+alt: cover1
 permalink: /projects/project-1/
 project-date: April 2014
 client: Start Bootstrap
 category: Web Development
 description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+image2: "/img/flag_usa.png" 
+alt2: "Description Image"
 ---
