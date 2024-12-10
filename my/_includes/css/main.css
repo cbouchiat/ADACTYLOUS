@@ -14,7 +14,7 @@
 
 
 p {
-    font-size: 25px; /* size of p text  */
+    font-size: 25px; /* size of p text */
 }
 
 p.small {
@@ -216,6 +216,8 @@ header .intro-text .skills {
 section {
     padding: 100px 0;
 }
+
+
 
 section h2 {
     margin: 0;
@@ -484,7 +486,20 @@ footer .footer-below {
     background-clip: border-box;
     -webkit-box-shadow: none;
     box-shadow: none;
+    /* background-image: url('img/pelicule.png'); /* background-size: cover;Makes the image cover the entire viewport */
+   /* background-position: center; 
+    background-size: 110%; /* Zooms in by increasing the size */
+   /* background-position: center; */
 }
+
+.portfolio-modal .modal-content {
+    margin: 0; /* Remove default margins */
+    background-image: url('img/pelicule.png');
+    background-repeat: repeat-y; /* Ensures the image repeats vertically */
+    background-position: left top, right top;; /* Positions the image on the left margin */
+    background-size: auto 100%; /* Scales the image to fit the full height */
+}
+
 
 .portfolio-modal .modal-content h2 {
     margin: 0;
