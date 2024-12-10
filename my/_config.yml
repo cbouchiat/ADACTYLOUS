@@ -6,6 +6,8 @@ description: "Write an awesome description for your new site here. You can edit 
 keywords: "your keywords, separated by commas"
 meta_authors: "By Chloé Bouchiat, Marlèn Stöckli, Germana Sergi, Luca Soravia, Claire Pinson"
 
+
+
 # Google webmaster tools
 google_verify:
 
@@ -62,10 +64,11 @@ credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a
 markdown: kramdown
 permalink: pretty
 
-#for posts
+#for posts - est ce aue ce serait pas special now 
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
       permalink: ""
+
