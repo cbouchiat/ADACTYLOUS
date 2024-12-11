@@ -214,9 +214,8 @@ header .intro-text .skills {
 }
 
 section {
-    padding: 100px 0;
+    padding: 50px 20px 100px 20px; 
 }
-
 
 
 section h2 {
@@ -371,6 +370,7 @@ section.success h2 {
     resize: none;
 }
 
+
 .floating-label-form-group label {
     display: block;
     z-index: 0;
@@ -494,10 +494,11 @@ footer .footer-below {
 
 .portfolio-modal .modal-content {
     margin: 0; /* Remove default margins */
-    background-image: url('img/pelicule.png');
+     /* background-image: url('img/pelicule.png');
     background-repeat: repeat-y; /* Ensures the image repeats vertically */
-    background-position: left top, right top;; /* Positions the image on the left margin */
-    background-size: auto 100%; /* Scales the image to fit the full height */
+    /*background-position: left top, right top;; /* Positions the image on the left margin */
+    /*background-size: auto 100%; /* Scales the image to fit the full height */
+
 }
 
 
