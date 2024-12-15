@@ -188,9 +188,10 @@ header .intro-text .names { /* define the group menber names */
     border: 0;
 }
 
-section { /* about is section success*/
+section { /* about is section success*/ 
     padding: 100px 0;
 }
+
 
 section h2 { /* style to all h2 in section */
     margin: 0;
@@ -271,7 +272,8 @@ section.success { /* like about */
     margin: 0;
 }
 
-#portfolio * {
+#portfolio * { /*  stacking order of positioned elements. It controls which elements are displayed in front or behind other elements along the z-axis*/
+/* overlap */
     z-index: 2;
 }
 
@@ -308,7 +310,7 @@ section.success { /* like about */
     }
   } */
 
-.btn-outline {
+.btn-outline { /* for social network of the footer */
     margin-top: 15px;
     border: solid 2px #fff;
     font-size: 20px;
@@ -326,7 +328,7 @@ section.success { /* like about */
     background: #fff;
 }
 
-.floating-label-form-group {
+.floating-label-form-group { /* for contact */
     position: relative;
     margin-bottom: 0;
     padding-bottom: .5em;
@@ -404,7 +406,7 @@ footer .footer-below {
     background-color: #{{ site.color.secondary-dark }};
 }
 
-.btn-social {
+.btn-social { /* logo social network */
     display: inline-block;
     width: 50px;
     height: 50px;
@@ -473,7 +475,7 @@ footer .footer-below {
     width: 75px;
     height: 75px;
     background-color: transparent;
-    cursor: pointer;
+    cursor: pointer; /* croix pour partir */
 }
 
 .portfolio-modal .close-modal:hover {
@@ -501,7 +503,9 @@ footer .footer-below {
     transform: rotate(90deg);
 }
 
+
 .navbar-nav>.active>a {
+/* chnage background color when section active on the navbar */
     background-color: #{{ site.color.secondary-dark }} !important;
 }
 
