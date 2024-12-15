@@ -1,11 +1,11 @@
 # Site settings
 title: Freelancer
-email: your-email@domain.com
+email: chloe.bouchiat@epfl.ch
 url: https://github.com/jeromelachaud/freelancer-theme
 description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 keywords: "your keywords, separated by commas"
-names: "By : Chloé Bouchiat, Claire Pinson, Germana Sergi, Luca Soravia, Marlène Stöckli"
-meta_author: LastName FirstName
+names: "By Chloé Bouchiat, Claire Pinson, Germana Sergi, Luca Soravia, Marlène Stöckli"
+meta_author: Bouchiat Chloé
 
 # Google webmaster tools
 google_verify:
@@ -25,7 +25,7 @@ disqus_shortname: myshortname
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 18bc9c #80B3FF
+  primary: "18bc9c" #80B3FF
   primary-rgb: "24,288,156" #"128,179,255"
   secondary: 2c3e50 #FD6E8A
   secondary-dark: 233140 #A2122F
