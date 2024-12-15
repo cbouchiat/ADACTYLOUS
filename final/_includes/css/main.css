@@ -96,7 +96,7 @@ header img {
     margin: 0 auto 20px;
 }
 
-header .intro-text .title {
+header .intro-text .title { /* define the title  */
     display: block;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -104,12 +104,12 @@ header .intro-text .title {
     font-weight: 700;
 }
 
-header .intro-text .names {
+header .intro-text .names { /* define the group menber names */
     font-size: 1.25em;
     font-weight: 300;
 }
 
-@media(min-width:768px) {
+@media(min-width:768px) { /* for larger screens */
     header .container {
         padding-top: 200px;
         padding-bottom: 100px;
@@ -124,7 +124,7 @@ header .intro-text .names {
     }
 }
 
-@media(min-width:768px) {
+@media(min-width:768px) { /* for larger screens */
     .navbar-fixed-top {
         padding: 25px 0;
         -webkit-transition: padding .3s;
@@ -185,7 +185,7 @@ section.success {
     background: #{{ site.color.primary }};
 }
 
-@media(max-width:767px) {
+@media(max-width:767px) { /* for larger screens */
     section {
         padding: 75px 0;
     }
@@ -246,14 +246,14 @@ section.success {
     z-index: 2;
 }
 
-@media(min-width:767px) {
+@media(min-width:767px) { /* for larger screens */
     #portfolio .portfolio-item {
         margin: 0 0 30px;
     }
 }
 
 /* Flexbox Portfolio Grid */
-@media (min-width: 640px) {
+@media (min-width: 640px) { /* for larger screens */
     .portfolio-flex-grid .portfolio-flex-row {
       display: flex;
       flex-flow: row wrap;
@@ -265,7 +265,7 @@ section.success {
       max-width: 49%;
     }
   }
-  @media (min-width: 960px) {
+  @media (min-width: 960px) { /* for larger screens */
     .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
       flex: 1 0 32%;
       max-width: 32%;
