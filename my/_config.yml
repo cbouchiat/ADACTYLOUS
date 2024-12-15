@@ -73,3 +73,4 @@ defaults:
       permalink: ""
 
  gems: [jekyll-giphy]
+ destination: ./final
