@@ -3,28 +3,24 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-body { /* The overflow-x: hidden rule ensures that if any content spills over horizontally beyond the viewport width, it won't be visible, 
-    and there will be no horizontal scroll bar. */
+
+body {
     overflow-x: hidden;
 }
 
-p { /* This rule changes the font size of all paragraphs (<p>) on the page to 20px*/
+p {
     font-size: 20px;
 }
 
-p.small { /* This rule changes the font size of paragraphs OF CLASS SMALL to 16px*/
+p.small {
     font-size: 16px;
 }
 
-.underline { /* underlines : use as <p>This is <span class="underline">underlined</span> text.</p>*/
-    text-decoration: underline;
-}
-
-a,  /*  all <a> (anchor) elements. */
-a:hover, /* <a> elements when hovered over by the user (e.g., when the cursor is over the link).*/
-a:focus, /*Targets <a> elements when they are focused (e.g., when selected via keyboard navigation or clicked) */
-a:active, /* Targets <a> elements during the moment they are being clicked. */
-a.active { /*  Targets <a> elements that have a class of active - navigation menus or tabs to indicate the current page.*/
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
     outline: 0;
     color: #{{ site.color.primary }};
 }
@@ -38,10 +34,8 @@ h6 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
-} /* All headings (h1 to h6) will be styled in uppercase, bold text. */
+}
 
-/* hr -> horizontal rule */
-/* star -> etoile */
 hr.star-light,
 hr.star-primary {
     margin: 25px auto 30px;
@@ -53,10 +47,9 @@ hr.star-primary {
     overflow: visible;
 }
 
-/* (:after) to add a decorative star icon after <hr> elements */
-hr.star-light:after, 
+hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005"; /* star */ 
+    content: "\f005";
     display: inline-block;
     position: relative;
     top: -.8em;
@@ -65,7 +58,6 @@ hr.star-primary:after {
     font-size: 2em;
 }
 
-/* Light star */
 hr.star-light {
     border-color: #fff;
 }
@@ -75,7 +67,6 @@ hr.star-light:after {
     background-color: #{{ site.color.primary }};
 }
 
-/* Primary star */
 hr.star-primary {
     border-color: #{{ site.color.secondary }};
 }
@@ -85,11 +76,10 @@ hr.star-primary:after {
     background-color: #fff;
 }
 
-.img-centered { /* Affiche une image centrée */
+.img-centered {
     margin: 0 auto;
 }
 
-/* Header */ 
 header {
     text-align: center;
     color: #fff;
@@ -97,17 +87,16 @@ header {
 }
 
 header .container {
-/* This CSS rule adds vertical spacing to a .container inside a <header>*/
     padding-top: 100px;
     padding-bottom: 50px;
 }
 
-header img { /* targets all images in header */
+header img {
     display: block;
     margin: 0 auto 20px;
 }
 
-header .intro-text .title { /* define the title  */
+header .intro-text .name {
     display: block;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -115,27 +104,27 @@ header .intro-text .title { /* define the title  */
     font-weight: 700;
 }
 
-header .intro-text .names { /* define the group menber names */
+header .intro-text .skills {
     font-size: 1.25em;
     font-weight: 300;
 }
 
-@media(min-width:768px) { /* for larger screens */
+@media(min-width:768px) {
     header .container {
         padding-top: 200px;
         padding-bottom: 100px;
     }
 
-    header .intro-text .title {
+    header .intro-text .name {
         font-size: 4.75em;
     }
 
-    header .intro-text .names {
+    header .intro-text .skills {
         font-size: 1.75em;
     }
 }
 
-@media(min-width:768px) { /* for larger screens */
+@media(min-width:768px) {
     .navbar-fixed-top {
         padding: 25px 0;
         -webkit-transition: padding .3s;
@@ -159,50 +148,44 @@ header .intro-text .names { /* define the group menber names */
     }
 }
 
-.navbar { /* navbar style */
+.navbar {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
 
-.navbar a:focus { /* Removes the outline around anchor (<a>) elements inside the .navbar when they are focused.*/
+.navbar a:focus {
     outline: 0;
 }
 
-.navbar .navbar-nav { /* navigation list*/
+.navbar .navbar-nav {
     letter-spacing: 1px;
 }
 
 .navbar .navbar-nav li a:focus {
-/* The rule removes the default focus outline from the navigation links (<a>) in the .navbar-nav when they are focused*/
     outline: 0;
 }
 
-/* This CSS rule removes any border from the .navbar-default and .navbar-inverse elements,*/
 .navbar-default,
-/*  the navbar-default class is used to define the default style for navigation bars.*/
-.navbar-inverse
-/* used in frameworks like Bootstrap to apply a darker, "inverse" style to the navigation bar (for example, a dark background with light text).*/
-            {
+.navbar-inverse {
     border: 0;
 }
 
-section { /* about is section success*/ 
+section {
     padding: 100px 0;
 }
 
-
-section h2 { /* style to all h2 in section */
+section h2 {
     margin: 0;
     font-size: 3em;
 }
 
-section.success { /* like about */
+section.success {
     color: #fff;
     background: #{{ site.color.primary }};
 }
 
-@media(max-width:767px) { /* for larger screens */
+@media(max-width:767px) {
     section {
         padding: 75px 0;
     }
@@ -212,18 +195,12 @@ section.success { /* like about */
     }
 }
 
-/* #portfolio targets an element with the id="portfolio */
 #portfolio .portfolio-item {
-/* to style individual items  */ 
     right: 0;
-/* Aligns the .portfolio-item to the right edge of its parent container (if the parent has a non-static position).*/
     margin: 0 0 15px;
-/* Ensures that there is a 15px space between the bottom of each .portfolio-item and the item below it (if there is one).*/
-/* else no margin */ 
 }
 
-#portfolio .portfolio-item .portfolio-link { /* styling <a> elements
-/*  targets the .portfolio-link class, which is inside a .portfolio-item class, which is itself inside the element with the id="portfolio*/
+#portfolio .portfolio-item .portfolio-link {
     display: block;
     position: relative;
     margin: 0 auto;
@@ -231,26 +208,21 @@ section.success { /* like about */
 }
 
 #portfolio .portfolio-item .portfolio-link .caption {
-/* c'est la forme verte avec la loupe sur chaque item
-/* for caption - displaying additional information about the portfolio item, such as a title, description, or hover effect text*/
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
     background: rgba({{ site.color.primary-rgb }},.9);
-    /* a semi-transparent background color */
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
-/* when we hover above -  opaciy becomes 1 */
     opacity: 1;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
-/* text in caption - dans rectangle vert*/ 
     position: absolute;
     top: 50%;
     width: 100%;
@@ -258,11 +230,10 @@ section.success { /* like about */
     margin-top: -12px;
     text-align: center;
     font-size: 20px;
-    color: #fff; /* couleur du bouton */
+    color: #fff;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
-/* targets the icon*/
     margin-top: -12px;
 }
 
@@ -271,19 +242,18 @@ section.success { /* like about */
     margin: 0;
 }
 
-#portfolio * { /*  stacking order of positioned elements. It controls which elements are displayed in front or behind other elements along the z-axis*/
-/* overlap */
+#portfolio * {
     z-index: 2;
 }
 
-@media(min-width:767px) { /* for larger screens */
+@media(min-width:767px) {
     #portfolio .portfolio-item {
         margin: 0 0 30px;
     }
 }
 
 /* Flexbox Portfolio Grid */
-@media (min-width: 640px) { /* for larger screens */
+@media (min-width: 640px) {
     .portfolio-flex-grid .portfolio-flex-row {
       display: flex;
       flex-flow: row wrap;
@@ -295,7 +265,7 @@ section.success { /* like about */
       max-width: 49%;
     }
   }
-  @media (min-width: 960px) { /* for larger screens */
+  @media (min-width: 960px) {
     .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
       flex: 1 0 32%;
       max-width: 32%;
@@ -309,7 +279,7 @@ section.success { /* like about */
     }
   } */
 
-.btn-outline { /* for social network of the footer */
+.btn-outline {
     margin-top: 15px;
     border: solid 2px #fff;
     font-size: 20px;
@@ -327,7 +297,7 @@ section.success { /* like about */
     background: #fff;
 }
 
-.floating-label-form-group { /* for contact */
+.floating-label-form-group {
     position: relative;
     margin-bottom: 0;
     padding-bottom: .5em;
@@ -405,7 +375,7 @@ footer .footer-below {
     background-color: #{{ site.color.secondary-dark }};
 }
 
-.btn-social { /* logo social network */
+.btn-social {
     display: inline-block;
     width: 50px;
     height: 50px;
@@ -474,7 +444,7 @@ footer .footer-below {
     width: 75px;
     height: 75px;
     background-color: transparent;
-    cursor: pointer; /* croix pour partir */
+    cursor: pointer;
 }
 
 .portfolio-modal .close-modal:hover {
@@ -502,9 +472,7 @@ footer .footer-below {
     transform: rotate(90deg);
 }
 
-
 .navbar-nav>.active>a {
-/* chnage background color when section active on the navbar */
     background-color: #{{ site.color.secondary-dark }} !important;
 }
 
