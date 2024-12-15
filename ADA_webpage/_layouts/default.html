@@ -3,22 +3,21 @@
 {% include head.html %}
 
 <body id="page-top" class="index">
-  {% include nav.html %}
-  {% include header.html %}
-  {% include portfolio_grid.html %}
-  {% include about.html %}
+  {% include nav.html %}  <!-- Navigation -->
+  {% include header.html %}  <!-- Header -->
+  
+  <!-- Introduction Section -->
+  {% include introduction.html %}  <!-- New Introduction -->
 
-  {% if site.contact == "static" %}
-  {% include contact_static.html %}
-  {% elsif site.contact == "disqus" %}
-  {% include contact_disqus.html %}
-  {% else %}
-  {% include contact.html %}
-  {% endif %}
+  {% include portfolio_grid.html %}  <!-- Portfolio Grid -->
+  {% include about.html %}  <!-- About Section -->
 
-  {% include footer.html %}
-  {% include modals.html %}
-  {% include js.html %}
+  <!-- Conclusion Section -->
+  {% include conclusion.html %}  <!-- New Conclusion -->
+
+  {% include footer.html %}  <!-- Footer -->
+  {% include modals.html %}  <!-- Modals -->
+  {% include js.html %}  <!-- JavaScript -->
 </body>
 
 </html>
