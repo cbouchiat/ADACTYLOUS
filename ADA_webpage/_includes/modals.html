@@ -1,47 +1,89 @@
 <!-- Portfolio Modals -->
-{% for post in site.posts %}
-<div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog"
-  aria-hidden="true">
+
+<!-- Modal 1 -->
+<div class="portfolio-modal modal fade" id="portfolioModal-1" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
     <div class="close-modal" data-dismiss="modal">
       <div class="lr">
-        <div class="rl">
-        </div>
+        <div class="rl"></div>
       </div>
     </div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
           <div class="modal-body">
-            <h2>{{ post.title }}</h2>
+            <h2>Post 1 Title</h2>
             <hr class="star-primary">
-            <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
-            {% if post.description %}
-            <p>{{ post.description }}</p>
-            {% endif %}
+            <img src="img/portfolio/Movies.png" class="img-responsive img-centered" alt="Post 1">
+            <p>This is the description of Post 1. It has detailed information about the project.</p>
             <ul class="list-inline item-details">
-              {% if post.client %}
-              <li>Client:
-                <strong>{{ post.client }}</strong>
-              </li>
-              {% endif %}
-              {% if post.project-date %}
-              <li>Date:
-                <strong>{{ post.project-date }}</strong>
-              </li>
-              {% endif %}
-              {% if post.category %}
-              <li>Service:
-                <strong>{{ post.category }}</strong>
-              </li>
-              {% endif %}
+              <li>Client: <strong>Client Name 1</strong></li>
+              <li>Date: <strong>2024-03-01</strong></li>
+              <li>Service: <strong>SEO Optimization</strong></li>
             </ul>
-            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
-              Close</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-{% endfor %}
+
+<!-- Modal 2 -->
+<div class="portfolio-modal modal fade" id="portfolioModal-2" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="close-modal" data-dismiss="modal">
+      <div class="lr">
+        <div class="rl"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="modal-body">
+            <h2>Post 2 Title</h2>
+            <hr class="star-primary">
+            <img src="img/portfolio/Actors.png" class="img-responsive img-centered" alt="Post 2">
+            <p>This is the description of Post 2. It has detailed information about the project.</p>
+            <ul class="list-inline item-details">
+              <li>Client: <strong>Client Name 2</strong></li>
+              <li>Date: <strong>2024-02-01</strong></li>
+              <li>Service: <strong>Graphic Design</strong></li>
+            </ul>
+            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="portfolio-modal modal fade" id="portfolioModal-3" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="close-modal" data-dismiss="modal">
+      <div class="lr">
+        <div class="rl"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="modal-body">
+            <h2>Post 3 Title</h2>
+            <hr class="star-primary">
+            <img src="img/portfolio/Plots.png" class="img-responsive img-centered" alt="Post 3">
+            <p>This is the description of Post 3. It has detailed information about the project.</p>
+            <ul class="list-inline item-details">
+              <li>Client: <strong>Client Name 3</strong></li>
+              <li>Date: <strong>2024-03-01</strong></li>
+              <li>Service: <strong>SEO Optimization</strong></li>
+            </ul>
+            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
