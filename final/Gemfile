@@ -2,3 +2,4 @@ source "https://rubygems.org"
 gemspec
 gem "sassc-rails"
 gem "jekyll-sass-converter"
+gem "sassc"
