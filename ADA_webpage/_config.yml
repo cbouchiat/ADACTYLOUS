@@ -29,7 +29,7 @@ color:
   primary: 18bc9c #80B3FF
   primary-rgb: "0,0,0" #"128,179,255 pour truc transparent sur les icones
   secondary: 000000  #FD6E8A
-  secondary-dark: 233140 #A2122F
+  secondary-dark: "0,0,128" #A2122F
 
 # Footer settings
 footer:
