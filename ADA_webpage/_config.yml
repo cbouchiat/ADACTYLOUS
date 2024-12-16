@@ -1,11 +1,12 @@
 # Site settings
-title: Freelancer
-email: your-email@domain.com
-url: https://github.com/jeromelachaud/freelancer-theme
+title: America first ? 
+subtitle: The influence of America in the global cinema
+email: chloe.bouchiat@epfl.ch
+url: https://github.com/cbouchiat/ADA_website
 description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 keywords: "your keywords, separated by commas"
-skills: "Web Developer - Graphic Artist - User Experience Designer"
-meta_author: LastName FirstName
+meta_author: Bouchiat Chloé
+group: "By Chloé Bouchiat, Marlèn Stöckli, Germana Sergi, Luca Soravia, Claire Pinson"
 
 # Google webmaster tools
 google_verify:
@@ -32,7 +33,7 @@ color:
 
 # Footer settings
 footer:
-  copyright: ADACTYLOUS 2024
+  copyright: ADACTYLOUS 2024 - Jekyll template from Jerome Lachaud 
   location: Location
   social: Around the Web
   credits: Credits
