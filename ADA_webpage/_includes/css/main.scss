@@ -4,6 +4,10 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
+$blanc: #fff;
+$black: #000;
+
 body {
     overflow-x: hidden;
 }
@@ -23,7 +27,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #{{ site.color.primary }};
+    color: $blanc;
 }
 
 h1,
@@ -37,54 +41,14 @@ h6 {
     font-weight: 700;
 }
 
-hr.star-light,
-hr.star-primary {
-    margin: 25px auto 30px;
-    padding: 0;
-    max-width: 250px;
-    border: 0;
-    border-top: solid 5px;
-    text-align: center;
-    overflow: visible;
-}
-
-hr.star-light:after,
-hr.star-primary:after {
-    content: "\f005";
-    display: inline-block;
-    position: relative;
-    top: -.8em;
-    padding: 0 .25em;
-    font-family: FontAwesome;
-    font-size: 2em;
-}
-
-hr.star-light {
-    border-color: #fff;
-}
-
-hr.star-light:after {
-    color: #fff;
-    background-color: #{{ site.color.primary }};
-}
-
-hr.star-primary {
-    border-color: #{{ site.color.secondary }};
-}
-
-hr.star-primary:after {
-    color: #{{ site.color.secondary }};
-    background-color: #fff;
-}
-
 .img-centered {
     margin: 0 auto;
 }
 
 header {
     text-align: center;
-    color: #fff;
-    background: #{{ site.color.primary }};
+    color: #000;
+    background: $blanc;
 }
 
 header .container {
@@ -167,6 +131,10 @@ header .intro-text .skills {
     outline: 0;
 }
 
+.navbar-fixed-top .navbar-nav > li > a {
+    color: #000; /* Navbar elements */
+}
+
 .navbar-default,
 .navbar-inverse {
     border: 0;
@@ -182,9 +150,11 @@ section h2 {
 }
 
 section.success {
-    color: #fff;
-    background: #{{ site.color.primary }};
+    color: #000;
+    background: $blanc;
 }
+
+
 
 @media(max-width:767px) {
     section {
@@ -195,6 +165,7 @@ section.success {
         padding-top: 75px;
     }
 }
+
 
 #portfolio .portfolio-item {
     right: 0;
@@ -231,7 +202,7 @@ section.success {
     margin-top: -12px;
     text-align: center;
     font-size: 20px;
-    color: #fff;
+    color: #000;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
@@ -242,6 +213,7 @@ section.success {
 #portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
     margin: 0;
 }
+
 
 #portfolio * {
     z-index: 2;
@@ -282,9 +254,9 @@ section.success {
 
 .btn-outline {
     margin-top: 15px;
-    border: solid 2px #fff;
+    border: solid 2px #000;
     font-size: 20px;
-    color: #fff;
+    color: #000;
     background: 0 0;
     transition: all .3s ease-in-out;
 }
@@ -293,9 +265,9 @@ section.success {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-    border: solid 2px #fff;
-    color: #{{ site.color.primary }};
-    background: #fff;
+    border: solid 2px #000;
+    color: $blanc;
+    background: #000;
 }
 
 .floating-label-form-group {
@@ -347,7 +319,7 @@ section.success {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #{{ site.color.primary }};
+    color: $blanc;
 }
 
 form .row:first-child .floating-label-form-group {
@@ -355,7 +327,7 @@ form .row:first-child .floating-label-form-group {
 }
 
 footer {
-    color: #fff;
+    color: #000;
 }
 
 footer h3 {
@@ -380,7 +352,7 @@ footer .footer-below {
     display: inline-block;
     width: 50px;
     height: 50px;
-    border: 2px solid #fff;
+    border: 2px solid #000;
     border-radius: 100%;
     text-align: center;
     font-size: 20px;
@@ -473,8 +445,9 @@ footer .footer-below {
     transform: rotate(90deg);
 }
 
-.navbar-nav>.active>a {
+.navbar-nav>.active>a { /* coueleur qd on reach la section */
     background-color: #{{ site.color.secondary-dark }} !important;
+    
 }
 
 /* Fix modal mouse wheel issues */
