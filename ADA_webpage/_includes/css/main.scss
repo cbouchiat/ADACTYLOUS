@@ -45,6 +45,7 @@ h6 {
     margin: 20px auto;
 }
 
+
 header {
     text-align: center;
     color: #000;
@@ -112,7 +113,7 @@ header .intro-text .group {
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
-        background-color:aquamarine;
+        /*background-color:aquamarine;*/
     }
 
     .navbar-fixed-top.navbar-shrink {
@@ -139,6 +140,7 @@ header .intro-text .group {
 }
 
 .navbar .navbar-nav li a:focus {
+    color: #000; 
     outline: 0;
 }
 
@@ -150,6 +152,7 @@ header .intro-text .group {
 .navbar-inverse {
     border: 0;
 }
+
 
 
 section {
