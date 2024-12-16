@@ -79,6 +79,7 @@ header .intro-text .name {
 }
 
 header .intro-text .subname {
+    margin-left: -12px;
     display: block;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -113,7 +114,9 @@ header .intro-text .group {
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
-        background-color:aquamarine;
+        background: url("img/flag_usa.png");
+        background-size: cover; /* Ensures the image covers the entire navbar */
+        background-position: center; 
     }
 
     .navbar-fixed-top .navbar-brand {
@@ -121,6 +124,9 @@ header .intro-text .group {
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
+        background: url("img/flag_usa.png");
+        background-size: cover; /* Ensures the image covers the entire navbar */
+        background-position: center; 
         /*background-color:aquamarine;*/
     }
 
@@ -183,6 +189,8 @@ section h2 {
 section.success {
     /*color: #000;*/
     background: $blanc;
+    margin-bottom: -100px;
+    margin-top: 50px;
 }
 
 
@@ -259,6 +267,8 @@ section.success {
 @media (min-width: 640px) {
     .portfolio-flex-grid .portfolio-flex-row {
       display: flex;
+      margin-bottom: -150px;
+      margin-top: 50px;  
       flex-flow: row wrap;
       align-items: stretch;
       justify-content: space-between;
@@ -367,7 +377,9 @@ footer h3 {
 footer .footer-above {
     padding-top: 50px;
     color: #fff;
-    background-color: #{{ site.color.secondary-dark }};
+    background: url("img/flag_usa.png");
+    background-size: cover; /* Ensures the image covers the entire navbar */
+    background-position: center; /
 }
 
 footer .footer-col {
