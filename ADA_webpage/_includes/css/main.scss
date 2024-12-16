@@ -39,6 +39,7 @@ h6 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+    text-align: center;
 }
 
 .img-centered {
@@ -121,7 +122,7 @@ header .intro-text .group {
     }
 
     .navbar-fixed-top.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
+        font-size: 1.75em;
     }
 }
 
@@ -139,12 +140,19 @@ header .intro-text .group {
     letter-spacing: 1px;
 }
 
+.navbar .navbar-nav li a:hover {
+    color: #fff; 
+    outline: 0;
+}
+
 .navbar .navbar-nav li a:focus {
     color: #000; 
     outline: 0;
 }
 
 .navbar-fixed-top .navbar-nav > li > a {
+    /*font-size: 1.2em;*/
+    font-size: 17px; /* Larger text */
     color: #000; /* Navbar elements */
 }
 
