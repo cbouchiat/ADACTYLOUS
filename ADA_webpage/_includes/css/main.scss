@@ -95,6 +95,7 @@ header .intro-text .skills {
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
+        background-color:aquamarine;
     }
 
     .navbar-fixed-top .navbar-brand {
@@ -102,6 +103,7 @@ header .intro-text .skills {
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
+        background-color:aquamarine;
     }
 
     .navbar-fixed-top.navbar-shrink {
@@ -140,8 +142,10 @@ header .intro-text .skills {
     border: 0;
 }
 
+
 section {
     padding: 100px 0;
+    color: #000;
 }
 
 section h2 {
@@ -150,10 +154,9 @@ section h2 {
 }
 
 section.success {
-    color: #000;
+    /*color: #000;*/
     background: $blanc;
 }
-
 
 
 @media(max-width:767px) {
@@ -261,6 +264,7 @@ section.success {
     transition: all .3s ease-in-out;
 }
 
+
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline:active,
@@ -269,6 +273,8 @@ section.success {
     color: $blanc;
     background: #000;
 }
+
+
 
 .floating-label-form-group {
     position: relative;
@@ -336,7 +342,7 @@ footer h3 {
 
 footer .footer-above {
     padding-top: 50px;
-    background-color: #{{ site.color.secondary }};
+    background-color: #{{ site.color.secondary-dark }};
 }
 
 footer .footer-col {
@@ -345,7 +351,7 @@ footer .footer-col {
 
 footer .footer-below {
     padding: 25px 0;
-    background-color: #{{ site.color.secondary-dark }};
+    background-color: #{{ site.color.primary-rgb }};
 }
 
 .btn-social {
@@ -429,7 +435,7 @@ footer .footer-below {
     width: 1px;
     height: 75px;
     margin-left: 35px;
-    background-color: #{{ site.color.secondary }};
+    background-color: #{{ site.color.secondary-dark }}; /* croix*/
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -439,16 +445,17 @@ footer .footer-below {
     z-index: 1052;
     width: 1px;
     height: 75px;
-    background-color: #{{ site.color.secondary }};
+    background-color: #{{ site.color.secondary-dark }};  /* croix*/
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
 
 .navbar-nav>.active>a { /* coueleur qd on reach la section */
-    background-color: #{{ site.color.secondary-dark }} !important;
+    background-color: $blanc !important;
     
 }
+
 
 /* Fix modal mouse wheel issues */
 /* https://github.com/twbs/bootstrap/issues/16297 */

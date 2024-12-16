@@ -1,5 +1,5 @@
 <!-- Portfolio Grid Section -->
- 
+ <!-- Portfolio Grid Section -->
 <section id="portfolio">
   <div class="container portfolio-flex-grid">
     <div class="row">
@@ -9,38 +9,21 @@
       </div>
     </div>
     <div class="portfolio-flex-row">
+      {% for post in site.posts %}
       <div class="portfolio-flex-item portfolio-item">
-        <a href="#portfolioModal-1" class="portfolio-link" data-toggle="modal">
+        <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
           <div class="caption">
             <div class="caption-content">
-              <i class="fa fa-play-circle fa-3x"></i>
+                <!-- <p> PLAY </p>
+                 <div class="caption-content"> : to write something 
+                 <i class="fa fa-search-plus fa-3x"></i> Code la loupe -->
+                <i class="fa fa-play-circle fa-3x"></i>
             </div>
           </div>
-          <img src="img/portfolio/Movies.png" class="img-responsive" alt=cover1>
+          <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
         </a>
       </div>
-
-      <div class="portfolio-flex-item portfolio-item">
-        <a href="#portfolioModal-2" class="portfolio-link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-play-circle fa-3x"></i>
-            </div>
-          </div>
-          <img src="img/portfolio/Actors.png" class="img-responsive" alt=cover2>
-        </a>
-      </div>
-
-      <div class="portfolio-flex-item portfolio-item">
-        <a href="#portfolioModal-3" class="portfolio-link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-play-circle fa-3x"></i>
-            </div>
-          </div>
-          <img src="img/portfolio/Plots.png" class="img-responsive" alt=cover3>
-        </a>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

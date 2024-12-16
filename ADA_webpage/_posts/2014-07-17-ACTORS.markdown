@@ -2,7 +2,7 @@
 layout: default
 modal-id: ACTORS
 date: 2014-07-17
-img: cake.png
+img: Actors.png
 alt: image-alt
 permalink: /posts/ACTORS
 project-date: April 2014

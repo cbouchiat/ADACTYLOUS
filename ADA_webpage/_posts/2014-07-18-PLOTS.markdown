@@ -2,7 +2,7 @@
 layout: default
 modal-id: PLOTS 
 date: 2014-07-16
-img: circus.png
+img: Plots.png
 alt: image-alt
 project-date: April 2014
 client: Start Bootstrap
