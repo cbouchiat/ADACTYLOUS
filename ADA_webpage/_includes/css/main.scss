@@ -101,6 +101,17 @@ table.custom-table td {
     margin-right: 20px; /* Optional: Adds space between the image and the text */
 }
 
+/* interactive plots */ 
+.centered-iframe {
+    display: block;
+    margin: 0 auto; /* Centers horizontally */
+    max-width: 100%;
+    width: 800px; /* Default width */
+    height: 600px; /* Default height */
+    border: none;
+    overflow: hidden;
+}
+
 header {
     text-align: center;
     color: #000;
