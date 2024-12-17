@@ -42,6 +42,39 @@ h6 {
     text-align: center;
 }
 
+table.custom-table {
+    font-family: Arial, sans-serif;
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px auto 30px;
+}
+
+table.custom-table th {
+    color: white; /* White text color for headers */
+    padding: 3px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+table.custom-table th:nth-child(1) {
+    background-color: #4CAF50; /* Green background for the first header */
+}
+
+table.custom-table th:nth-child(2) {
+    background-color: #2196F3; /* Blue background for the second header */
+}
+
+table.custom-table th:nth-child(3) {
+    background-color: #FF9800; /* Orange background for the third header */
+}
+
+
+table.custom-table td {
+    border: 2px solid black;
+    padding: 3px;
+    text-align: center;
+}
+
 .section-title {
     display: inline-block;          /* Ensures the title is inline for the rectangle effect */
     padding: 10px 600px;   
