@@ -48,28 +48,33 @@ table.custom-table {
     font-family: Arial, sans-serif;
     width: 50%;
     border-collapse: collapse;
-    margin: 20px auto 30px;
+    margin: 30px auto 50px;
 }
 
 table.custom-table th {
     color: white; /* White text color for headers */
-    padding: 3px;
+    padding: 4px;
     text-align: center;
     border: 2px solid black;
 }
 
 table.custom-table th:nth-child(1) {
-    background-color: #4CAF50; /* Green background for the first header */
+    background-color: grey /* Green background for the first header */
 }
 
 table.custom-table th:nth-child(2) {
-    background-color: #2196F3; /* Blue background for the second header */
+    background-color: grey; /* Blue background for the second header */
 }
 
 table.custom-table th:nth-child(3) {
-    background-color: #FF9800; /* Orange background for the third header */
+    background-color: grey; /* Orange background for the third header */
 }
-
+table.custom-table th:nth-child(4) {
+    background-color: grey; /* Orange background for the third header */
+}
+table.custom-table th:nth-child(5) {
+    background-color: grey; /* Orange background for the third header */
+}
 
 table.custom-table td {
     border: 2px solid black;
@@ -110,8 +115,11 @@ table.custom-table td {
     /*width: 800px; /* Default width */
    /* height: 600px; /* Default height */
     border: none;
+    padding: 0;
     /*overflow: hidden;*/
 }
+
+
 
 header {
     text-align: center;
@@ -519,6 +527,7 @@ footer .footer-below {
 
 .portfolio-modal .modal-content img {
     margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .portfolio-modal .modal-content iframe {
