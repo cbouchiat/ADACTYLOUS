@@ -147,65 +147,65 @@
               </tr>
               <tr>
                 <td>bias</td>
-                <td>19.414</td> 
+                <td>6.488</td> 
                 <td>363</td>
               </tr>
               <tr>
                 <td>Gay themed </td>
-                <td>1.813</td> 
+                <td>0.279</td> 
                 <td>10</td>
               </tr>
               <tr>
-                <td>Japanese language</td>
-                <td>0.869</td> 
-                <td>12</td>
-              </tr>
-              <tr>
-                <td>Spain</td>
-                <td>0.613</td> 
-                <td>11</td>
-              </tr>
-              <tr>
-                <td>French language</td>
-                <td>0.550</td> 
-                <td>31</td>
-              </tr>
-              <tr>
-                <td>Family drama</td>
-                <td>0.483</td>
-                <td>13</td>
-              </tr>
-              <tr>
-                <td>Costume drama</td>
-                <td>0.476</td>
-                <td>11</td>
+                <td>Box office</td>
+                <td>0.250</td> 
+                <td>363</td>
               </tr>
               <tr>
                 <td>Drama</td>
-                <td>0.395</td>
+                <td>0.193</td>
                 <td>221</td>
               </tr>
               <tr>
-                <td>Coming of age</td>
-                <td>0.390</td>
-                <td>13</td>
+                <td>Japanese language</td>
+                <td>0.160</td> 
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>French language</td>
+                <td>0.149</td> 
+                <td>31</td>
               </tr>
               <tr>
                 <td>Indie</td>
-                <td>0.351</td>
+                <td>0.124</td>
                 <td>54</td>
               </tr>
-
+              <tr>
+                <td>United Kingdom</td>
+                <td>0.103</td>
+                <td>114</td>
+              </tr>
+              <tr>
+                <td>Crime fiction</td>
+                <td>0.103</td>
+                <td>62</td>
+              </tr>
+              <tr>
+                <td>Family drama </td>
+                <td>0.097</td>
+                <td>13</td>
+              </tr>
             </table>
             <h4> Top 10 biggest weights in the linear regression of IMDb ratings</h4>
-          <p>Most of these parameters are genres or languages. By far, gay themed movies seem to be better rated. Lots of drama subcategories are also represented. Recalling our previous analysis on production of drama movies in the US, which was the major genre produced and exported by this country, it makes sense that drama movies are extensively produced since there are particularly appreciated by the public.
+          <p>Most of these parameters are genres or languages. With a small difference, the gay themed movies seem to be the best rated. However, only 10 movies in the dataset are gay themed. The audience watching movies of this genre might be biased when rating these movies because it might be looking specifically for such movies and watch them rather for entertainment. This explains the importance of the gay themed movies as the most important feature for a high IMDb rating. The only continuous feature correlated with IMDb ratings is the box office revenue. This finding is enabled by the standardized scaling of features during pre-processing, which facilitates the comparison of weights. A lot of drama subcategories are also represented by the MSI. Recalling our previous analysis on production of drama movies in the US, which was the major genre produced and exported by this country, it makes sense that drama movies are extensively produced since they are particularly appreciated by the public. However, the genre drama is quite broad and many movies could be classified as such. Many movies embed conflicts between characters in their plots, allowing the public to relate... But would these films impact us as profoundly without the essence of drama? The other features correlated with success are 3 languages, 1 country and the genre crime-fiction. This may suggest that some populations (namely French, Japanese and Indian) are susceptible to rating movies in their native language with better grades.
           </p>
           <img src="img/movies/gay-film.jpg" class="img-responsive img-centered" alt="other" width="250" height="250">
           <h4>9 Dead Gay Guys (2002) </h4>
-          <p>Unfortunately, the fitted model is only explaining 47% (R2) of the variance of the IMDB during 5-fold cross validation, so we cannot assume that the resulting index is a good prediction of IMDb rating. However, we don’t need to predict accurately the IMDb, but we were looking for a metric to predict and compare the success of movies. Although the predictions did not show any outliers (they were bounded between a value of 3 and 9 for the IMDb score), the predictions were still rearranged on the central 95% of the total range of the predicted values and re-scaled in the [0;100] interval to calculate the MSI. This is implemented to handle potential outliers and to have a spread distribution in the final MSI range. In this context, we call ‘outlier’ a predicted value out of the range [0,10], i.e. out of the range of the IMDb scores.
+          <p>Unfortunately, the fitted model is only explaining 47% (R2) of the variance of the IMDb during 5-fold cross validation, so we cannot assume that the resulting index is a good prediction of IMDb rating. However, we did not aim to accurately predict the IMDb, but we were looking for a metric to predict and compare the success of movies in a range of [0;100]. The predictions of this dataset are not at all in the range of IMDb (rating range between 0 and 10) and outliers were observed. Post-processing was therefore needed to recover an index bounded between 0 and 100. </p>
+          <p>After evaluating the performance of the model with a dataset containing the IMDb ratings, the predictions were carried out with an extended dataset. This dataset still contains all the features needed for prediction with no NaN values, but does not necessarily contain the IMDb ratings. This extended dataset contains ~ 8 000 movies, which is way higher than the dataset used for training.
           </p>
           <p>Now, we can calculate the MSI for all the movies in the dataset, which contain the chosen input features but have no IMDb rating available. The plot below shows the distribution of the predicted MSI for all the movies in the dataset containing the necessary features. The predictions did not generate any outliers.</p>
-          <img src="img/movies/MSI_distribution.png"class="img-responsive img-centered" width="750" height="550"></iframe>
+           <img src="img/movies/MSI_distribution.png"class="img-responsive img-centered" width="750" height="550"></iframe>
            <p>The MSI of the extended dataset follows a very slightly right skewed, showing that some movies still tends be more popular.
             But keeping in mind our initial question, is there a difference in MSI between the US-produced movies and the movies produced outside of the US? Let’s check: A t-test puts into evidence that in contrast to what we have seen until now, movies produced outside the US are significantly more successful according to MSI with a p-value of 1.1e-32. This surprising result could be explained that the US are producing lots of movies as seen before and that lots of poor-quality movies are produced, pulling the mean MSI.
             The timeline below shows the development of the predicted MSI in time. This timeline is consistent with the previous results: in the 70’s, the movies produced outside the US are quite likely to have a MSI superior to the US movies. The trend in the beginning of the timeline is not clear since very few movies outside of the US (in the rest of the world) were produced at that time. Furthermore, the timeline reveals that especially in recent years, the popularity of American movies seems to decline. Interesting. Is this weakening the conspiracy theory that the US is influencing the world importantly?
@@ -431,6 +431,9 @@
                 <img src="img/plots/summaries_timeseries_lexicon.png" class="img-responsive img-centered" alt="other" width="1100" height="750">
                 <p> Interestingly, the presence of American culture for the three types of movie origins has not evolved much over time. Foreign movies have always used the least American words, especially between 1920 and 2015. Therefore, the worldwide American influence has not increased since 1920, or, is not traduced by movie synopses. For the partially-American movies, the percentage of American culture has increased since 1945, to reach nearly US-only levels. The trend can be explained by the increased importance of partially-American movies, in exponential growth since the 1940s, or by a greater influence of the USA over time. Probably both actually…
                 </p>
+                <p style="margin-top: 10px;"> <b>So, how much of Hollywood’s soft power shows up in movie plot summaries? </b> Turns out, America is all over the map (literally). By counting the mentions of US geopolitical entities in the summaries, we uncovered how often stories wander through New York or take a ride to Texas. It’s like America can’t resist stamping its cultural passport everywhere. As for our investigation on iconic “American words” like Thanksgiving or McDonald’s? Less successful. Our 200-word lexicon didn’t quite cut it—probably because America’s influence isn’t limited to apple pies and baseball (shocking, I know).
+                  Moral of the story? If you want to measure cultural takeover, follow the locations’ names. And if you want to flex a truly star-spangled lexicon, bring a bigger dictionary (and a better computer).
+                  </p>
               </div>
               <div class="col-lg-12 text-center" style="margin-top: 15px;"> 
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
@@ -569,9 +572,10 @@
                 <img src="img/five.png" class="img-responsive img-left" alt="other" width="100" height="100">
                 <h2 style="font-size: 40px; color: #000; margin-top:-30px;"> Actors success index (ASI) </h2>
               </div>
-              <p>We are finally at the end of our investigation. Given the findings above, we collected all the information that appeared important to define an actor’s career and we used it to predict a success index. But how could we prove globally the success of an actor? We decided to look at the results of the most famous film awards in the world: the Golden Globes. It is an annual award ceremony held since 1944 to honor artists and their works. In particular, based on the nominations and the results of each year, the points for theGolden Globe index (our ‘ground truth’) were assigned as follow: 0 points if never nominated; 1 point if at least once nominated; 2 points if at least once won; 3 points if more than once won.</p>
-              <p> An ordered regression model was used to predict the success index using the Golden Globe index as target and the following features were fitted as dependent variables: gender of actor, height of actor, age at first movie, number of movies played, number of famous movies played and career’s length. Before fitting the model, the dataset was downsampled to balance the significantly bigger number of actors having Golden Globe index of 0. The final fit gave an accuracy of 85.25% on the test set and presented the following coefficients:
+              <p>We are finally at the end of our investigation. Given the findings above, we collected all the information that appeared important to define an actor’s career and we used it to predict a success index. But how could we prove globally the success of an actor? We decided to look at the results of the most famous film awards in the world: the Golden Globes. It is an annual award ceremony held since 1944 to honor artists and their works. In particular, based on the nominations and the results of each year, the points for the Golden Globe index (our ‘ground truth’) were assigned as follows: 0 points if never nominated; 1 point if at least once nominated; 2 points if at least once won; 3 points if more than once won.
               </p>
+                <p>  An ordered regression model was used to predict the success index using the Golden Globe index as target and the following features were fitted as dependent variables: gender of actor, height of actor, age at first movie, number of movies played, number of famous movies played and career’s length. Before fitting the model, the dataset was oversampled to balance the significantly bigger number of actors having Golden Globe index of 0. The final fit gave an accuracy of 93.47% on the test set and presented the following coefficients:
+                </p>
               <table class="custom-table">
                 <tr>
                   <th> </th>
@@ -580,46 +584,64 @@
                 </tr>
                 <tr>
                   <td>Height</td>
-                  <td>0.1636 </td>
-                  <td>0.004 </td>
+                  <td>0.0146 </td>
+                  <td>0.003 </td>
                 </tr>
                 <tr>
                   <td>Age for the actor's first movie</td> 
-                  <td>-0.0276 </td>
-                  <td>0.006</td> 
+                  <td>-0.2183 </td>
+                  <td>0.005</td> 
                 </tr>
                 <tr>
                   <td>Total number of movies</td>
-                  <td>0.2079</td>
-                  <td>0.004</td> 
+                  <td>0.1874</td>
+                  <td>0.002</td> 
                 </tr>
                 <tr>
                   <td>Career length (based on actor age)</td>
-                  <td>0.0332</td> 
-                  <td>0.004</td>
-                </tr>
-                <tr>
-                  <td>Number of famous movies </td>
-                  <td>0.1186</td> 
+                  <td>0.2773</td> 
                   <td>0.002</td>
                 </tr>
                 <tr>
-                  <td>Female</td>
-                  <td>-0.0509</td>
+                  <td>Number of famous movies </td>
+                  <td>0.1639</td> 
+                  <td>0.001</td>
+                </tr>
+                <tr>
+                  <td>Female gender </td>
+                  <td>-0.0197</td>
+                  <td>0.006</td>
+                </tr>
+                <tr>
+                  <td>Male gender </td>
+                  <td>-0.2435</td>
                   <td>0.007</td>
                 </tr>
                 <tr>
-                  <td>Male</td>
-                  <td>0.0720</td>
-                  <td>0.007</td>
+                  <td>0.0/1.0 </td>
+                  <td>0.0905</td>
+                  <td>0.005</td>
+                </tr>
+                <tr>
+                  <td>1.0/2.0 </td>
+                  <td>0.4897</td>
+                  <td>0.003</td>
+                </tr>
+                <tr>
+                  <td>2.0/3.0 </td>
+                  <td>0.4897</td>
+                  <td>0.003</td>
                 </tr>
               </table>
-              <p>The same model is then used to make predictions on the full dataframe and the following predictions were obtained for the US vs non-US actors. 
-              </p>
+              <p> </p>
               <img src="img/actors/actors_violin_plot_prediction.png" class="img-responsive img-centered" alt="other" width="600" height="550">
-              <p> We can state that the Americans seem to hold again the podium of success. But the rest of the world stayed on their heels this time! Indeed, the average indices of the two groups are really close. However, we have to admit that this is not a bad result for the Americans, since they are being compared in average to the actors of ALL THE COUNTRIES of the rest of the world.
-              </p>
+              <p> We can immediately give a look at the variables that most influence the success of an actor: the career length, the age at first movie, and being a man…but negatively!
+                The same model is then used to make predictions on the full dataframe. The average index was 0.72 for US actors and 0.47 for the non-US. The distributions of the classification can be visualised in the violin plot. We can state that the Americans hold again the podium of success. And it seems like this time there is not much hope for the others! While the distributions for the class 0 is really similar for the two groups, Americans prevail in the other three and more important classes, with a clear win in class 3. Evidently, Hollywood really have a special regard for its blue-white-and-red stars!
+                </p>
               <img src="img/gifs/wall-street.gif" class="img-responsive img-centered" alt="other" width="400" height="350">
+              <p style="margin-top: 10px;"> <b>So, who dominates the silver screen, Americans or foreign actors? </b> Drumroll, please... unsurprisingly, Hollywood loves its own! US actors score higher on the Success Index, snagging more Golden Globes, starring in bigger box office hits, and kicking off their careers earlier. Meanwhile, foreign actors shine, but often in fleeting roles (hello, "The One-Hit Wonder" club). Still, when they manage to break into the US market, their careers often see a boost. The data doesn't lie: acting in a US film can be a golden ticket.</p>
+              <p>The key to success? Start young, land a long career, and, ideally, be cast in a US movie.
+              </p>
             </div>
             <div class="col-lg-12 text-center" style="margin-top: 15px;"> 
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
