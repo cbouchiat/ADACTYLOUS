@@ -94,7 +94,7 @@
               <h2 style="font-size: 40px; color: #000; margin-top:-30px;">IMDb ratings</h2>
             </div>
               <p>What was neglected until now, is the opinion of the spectator. What if the box office revenue is not actually representative for the popularity of a movie? Let’s inspect - using the IMDb dataset for movies, which contains the IMDb rating for each movie with a value ranging from 0 to 10 - how American and non-American films are rated by the spectators. The statistics do not reveal any preferences related to the production country of the movies. US produced, partially US-produced, and non-US produced movies all have similar mean, median, and standard deviation with ratings located around 6. The histogram  for the average IMDb rating for US-only produced movies follows a normal distribution. On the contrary, the average IMDb rating for partially US-produced and  non-US produced movies are slightly right skewed. Hmmm… the conspiracy theory starts losing its apparent importance. If the spectator does not let himself influence in his preferences for American movies, then where is the hypothesized influence of the US?  But wait. We can’t yet draw any conclusions from these first statistics.  </p>
-             <img src="img/gifs/conspiracy.gif" class="img-responsive img-centered" alt="other" width="350" height="200">
+             <img src="img/gifs/conspiracy.gif" class="img-responsive img-centered" alt="other" width="350" height="300">
              <p>The influence of America might depend on several aspects, as for example the culture of the spectator. For instance, in Sydney, audiences generally prefer American films over locally produced movies. So stay tuned, we’re not yet at the end of the exploration of the concerned research question. 
              </p>
              <img src="img/movies/movies_boxoffice_timeseries.png" class="img-responsive img-centered" alt=other  width="1000" height="1000" > <!-- image when clicking on the link -->
@@ -111,21 +111,22 @@
             <p>Now, let’s recall that the availability of movies in commonly spoken languages is important for their success. Therefore, this section is dedicated to the languages in which movies are translated. How are the US using translations to export their movies and spread their culture?</p>
           
              <!-- Changer ca  -->
-            <iframe src="img/movies/interactive_languages.html" class="centered-iframe" scrolling="yes" width="600" height="600" ></iframe>
-
+             <img src="img/movies/piechart_languages.png" class="img-responsive img-centered" alt="other" width="650" height="600">
+            
             <p>We observe on the figure above that 50% of the movies are available in English. Assuming that most of American people only speak fluently English, that means that "only" half of the produced movies are accessible to this population. 
               Let’s also recall that not everybody is fluent in English even though it is the international language. For instance, China, 18% of the population of this planet, is ranked #82 in the Education English First Proficiency Index. 
             </p>
-            <img src="img/gifs/mary-poppins.gif" class="img-responsive img-centered" alt="other" width="350" height="200">
+           <!-- <img src="img/gifs/mary-poppins.gif" class="img-responsive img-centered" alt="other" width="350" height="200"> -->
             <p>Translating a movie to English is therefore a way to make it international for foreigners speaking English, but also to make it available for American people. To target a specific country, the movies would better be translated into the language.s spoken there.
               Hence, we could be wondering if a movie available in English generates more money than a movie not available in English? The plot below reveals that the box office revenue is significantly higher for movies available in English compared to those without (p-value = 4.1e-10). However, that does not yet mean that there is a causality relation. 
             </p>
-            <iframe src="img/movies/interactive_boxplot_English_and_boxoffice.html"class="centered-iframe" scrolling="no" width="1100" height="550"></iframe>
+            <!-- LA MANQUE -->
+           <img src="img/movies/boxplot_ENGLISH_and_BOXOFFICE.png" class="img-responsive img-centered" alt="other" width="600" height="600">
             <p>Now focusing on the movies produced strictly by the US, to what extend are they exported abroad ? Is it genre-dependent ?
               To answer these questions, the movies were grouped by genre and the number of translations of the movies were summed up.
               The plot below shows the top 10 of the genres cumulating the most translations among US movies, and the corresponding number of translations for movies partially produced by the US.
             </p>
-            <img src="img/movies/drama_US_translations.png"class="centered-iframe" scrolling="no" width="1100" height="550"></iframe>
+            <img src="img/movies/drama_US_translations.png"class="img-responsive img-centered" width="600" height="550"></img>
             <p>As the plot reveals, the genre “drama” contains the most US movies translated to other languages. The partially US-produced movies don’t follow the same trend even though the 2 most translated genres are the same for both strictly and partially US-produced movies. Assuming that translation numbers are related to the export of movies, one can deduce from this plot that US drama movies are by far the most exported (and maybe appreciated!) genre worldwide and thus, the US spread their culture through the export of these movies. Wow, this finding introduces some new spice to our conspiracy theory!
             </p>
 
@@ -199,20 +200,20 @@
             <h4> Top 10 biggest weights in the linear regression of IMDb ratings</h4>
           <p>Most of these parameters are genres or languages. By far, gay themed movies seem to be better rated. Lots of drama subcategories are also represented. Recalling our previous analysis on production of drama movies in the US, which was the major genre produced and exported by this country, it makes sense that drama movies are extensively produced since there are particularly appreciated by the public.
           </p>
-          <img src="img/movies/gay-film.jpg" class="img-responsive img-centered" alt="other" width="350" height="350">
+          <img src="img/movies/gay-film.jpg" class="img-responsive img-centered" alt="other" width="250" height="250">
           <h4>9 Dead Gay Guys (2002) </h4>
           <p>Unfortunately, the fitted model is only explaining 47% (R2) of the variance of the IMDB during 5-fold cross validation, so we cannot assume that the resulting index is a good prediction of IMDb rating. However, we don’t need to predict accurately the IMDb, but we were looking for a metric to predict and compare the success of movies. Although the predictions did not show any outliers (they were bounded between a value of 3 and 9 for the IMDb score), the predictions were still rearranged on the central 95% of the total range of the predicted values and re-scaled in the [0;100] interval to calculate the MSI. This is implemented to handle potential outliers and to have a spread distribution in the final MSI range. In this context, we call ‘outlier’ a predicted value out of the range [0,10], i.e. out of the range of the IMDb scores.
           </p>
           <p>Now, we can calculate the MSI for all the movies in the dataset, which contain the chosen input features but have no IMDb rating available. The plot below shows the distribution of the predicted MSI for all the movies in the dataset containing the necessary features. The predictions did not generate any outliers.</p>
-          <img src="img/movies/MSI_distribution.png"class="centered-iframe" scrolling="no" width="1100" height="550"></iframe>
+          <img src="img/movies/MSI_distribution.png"class="img-responsive img-centered" width="750" height="550"></iframe>
            <p>The MSI of the extended dataset follows a very slightly right skewed, showing that some movies still tends be more popular.
             But keeping in mind our initial question, is there a difference in MSI between the US-produced movies and the movies produced outside of the US? Let’s check: A t-test puts into evidence that in contrast to what we have seen until now, movies produced outside the US are significantly more successful according to MSI with a p-value of 1.1e-32. This surprising result could be explained that the US are producing lots of movies as seen before and that lots of poor-quality movies are produced, pulling the mean MSI.
             The timeline below shows the development of the predicted MSI in time. This timeline is consistent with the previous results: in the 70’s, the movies produced outside the US are quite likely to have a MSI superior to the US movies. The trend in the beginning of the timeline is not clear since very few movies outside of the US (in the rest of the world) were produced at that time. Furthermore, the timeline reveals that especially in recent years, the popularity of American movies seems to decline. Interesting. Is this weakening the conspiracy theory that the US is influencing the world importantly?
              For all the sceptics, we jump to the next component of our analysis: the careers of actors and actresses.
             </p>
-            <iframe src="img/movies/interactive_boxplot_MSI.html"class="centered-iframe" scrolling="no" width="1100" height="550"></iframe>
+            <img src="img/movies/MSI_boxplot.png" class="img-responsive img-centered" width="700" height="750"></img>
             <!-- MISSING ELEMENT : DISTRIBUTION MSI OVER TIME  WHOLE DATASET  -->
-            <img src="img/movies/MSI_timeseries.png"class="centered-iframe" scrolling="no" width="800" height="550"></iframe>
+            <img src="img/movies/MSI_timeseries.png"class="img-responsive img-centered" width="600" height="450"></img>
             <p> METTRE PETITE CONCLU </p>
           </div>
             <button type="button" class="btn btn-default" data-dismiss="modal" style="margin-top: 15px;"><i class="fa fa-times"></i> Close</button>
@@ -387,7 +388,7 @@
                   
                   Similarly as for the GPEs, we calculated the percentage of American culture, here using the proprotion between the number of words present in the list of 200 American words and the total number of words per summary. 
                 </p>
-                <!-- <img src="img/plots/macdo.jpg" width="10%">-->
+                <img src="img/plots/usa-lexicon.jpg"  class="img-responsive img-centered" alt="other" width="300" height="300" >
                 <img src="img/plots/summaries_distribution_lexicon.png" class="img-responsive img-centered" alt="other" width="850" height="750">
                  <p>Contrary to the GPEs, the American words are presenting a normal distribution (less obvious for the partially-US movies though). More precisely, it appears 36.16% of US-only movies, 36.15% of partially-US movies and only 17.21% of foreign synopses exhibit at least 1 word from the American culture list. As the list also contains generic words like “president” or “motorcycle club”, other statistics may be more relevant. 
                 </p>
@@ -613,9 +614,9 @@
                   <td>0.007</td>
                 </tr>
               </table>
-              <p>The same model is then used to make predictions on the full dataframe and the following predictions were obtained for the US vs non-US actors. **table or/and violin plot**
+              <p>The same model is then used to make predictions on the full dataframe and the following predictions were obtained for the US vs non-US actors. 
               </p>
-              <img src="img/actors/actors_violin_plot_prediction.png" class="img-responsive img-centered" alt="other" width="400" height="350">
+              <img src="img/actors/actors_violin_plot_prediction.png" class="img-responsive img-centered" alt="other" width="600" height="550">
               <p> We can state that the Americans seem to hold again the podium of success. But the rest of the world stayed on their heels this time! Indeed, the average indices of the two groups are really close. However, we have to admit that this is not a bad result for the Americans, since they are being compared in average to the actors of ALL THE COUNTRIES of the rest of the world.
               </p>
               <img src="img/gifs/wall-street.gif" class="img-responsive img-centered" alt="other" width="400" height="350">
