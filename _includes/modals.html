@@ -26,6 +26,7 @@
                 <h2 style="font-size: 40px; color: #000; margin-top:-30px;">Box Office Revenue</h2>
               </div>
                 <p>First of all, creating many movies does not directly relate to a successful film industry. We have to take a closer look, how the US produced movies are actually performing. And since money rules the world…</p>
+               <h5 style="margin-top: 10px;margin-bottom: -28px;"> $ in cinema is like DiCaprio in a film : always nice to have  </h5>
                 <img src="img/gifs/money.gif" class="img-responsive img-centered" alt="other" width="350" height="200">
                 <p>… let’s start with having a look at the box office revenue of the movies. While comparing the box office of American movies to non-American movies. The median of US produced movies is 10.76 million USD and a mean of 48.81 million USD (with standard deviation of 34.99 million USD) whereas non US produced movies have a median of 5.19 million USD and a mean of 16.81 million USD (with standard deviation of 34.99 million USD). However, co-productions between the US and other countries seem to be the most successful movie formats since they generate the highest box office. Here, the median and the mean are 23.00 and 76.13 million USD respectively. 
                 </p>
@@ -33,12 +34,18 @@
                 <img src="img/movies/avatar.jpg" class="img-responsive img-centered" alt="other" width="300" height="200">
                 <p>Therefore, there are a few very successful movies which create a heavy tailed and right-skewed distribution. This means that median and mean are rather meaningless to describe the data and no causality can be derived anyways. Nonetheless, the differences in box office revenue between US-only produced and between movies produced elsewhere in the world are remarkable. Intriguing… okay, let’s dive deeper into the data.
                 </p>
+                <img src="img/movies/movies_boxoffice_timeseries.png" class="img-responsive img-centered" alt=other  width="1000" height="1000" > <!-- image when clicking on the link -->
+                <p>Let’s again have a closer look at the development of the yearly box office revenues of movies produced in the US compared to movies from other production countries. The plot on the left shows that the average box office revenue of American movies is higher than the one of movies produced outside the US. However, it seems that there is an exception in the 70es where movies from the rest of the world have in average an importantly bigger box office revenue than American movies. This matches with the decrease in movie production in the 70’s observed in the histogramme above.</p>
+                <p> Starting from the 80s, American movies took over the lead again and the average box office revenue has increased until today. But so does the error (filled plots) which reminds us that a few very successful American movies increase the mean considerably. The right plot indicates that the box office revenue of partially-American produced movies develops similarly to strictly-American produced movies, although the coproductions overtop the american movies from time to time with some fluctuation. However, since 2000, it seems that producing a film only partially in the US is beneficial in terms of yearly average box office revenues. This can be explained by the fact that nowadays, movies are generally not only produced in one country since many virtual effects companies are taking contracts worldwide. Furthermore, it might be cheaper to produce movies partially out of the US because of cheaper labor.</p>
+               
+               
                  <!-- MOVIE RUNTIME  -->
                 <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 10px; margin-top: 50px;">
                   <img src="img/two.png" class="img-responsive img-left" alt="other" width="100" height="100">
                   <h2 style="font-size: 40px; color: #000; margin-top:-30px;">Movie runtime</h2>
                 </div>
                 <p> How long are American and non-American movies in terms of movie runtime? In the early 20th century, the movies were kept rather short compared to today. Many had a duration of about 20 to 40 minutes. But there exists also very long movies such as “Modern Times Forever” produced in 2011, which has a duration of 10 days!</p>
+                <h5 style="margin-top: 10px;margin-bottom: -28px;"> Soporific isn't it ?</h5>
                 <img src="img/gifs/tired.gif" class="img-responsive img-centered" alt="other" width="350" height="200">
                 <p>Discarding these exceptions and keeping only movies with a runtime of 60 to 180 minutes, the mean and median reveal that US-only produced movies last slightly shorter than co-productions with the US or non-American movies with means of 84, 99 and 98 minutes respectively (the standard deviation is about 30 minutes for the entire dataset, which is rather high). Looking at the distribution of the movie runtimes, it seems that they follow approximately a normal distribution with the exception of US-only produced movies which show a bimodal distribution with a peak around 20 minutes. Apparently, there is a tendency that US-produced movies are shorter than movies produced elsewhere. But let’s recall that most of the movies produced in the early 20th centuries are American movies and that back in those days, the movie duration was about 20 minutes. That is where this second peak must come from.
                 </p>
@@ -94,24 +101,20 @@
               <h2 style="font-size: 40px; color: #000; margin-top:-30px;">IMDb ratings</h2>
             </div>
               <p>What was neglected until now, is the opinion of the spectator. What if the box office revenue is not actually representative for the popularity of a movie? Let’s inspect - using the IMDb dataset for movies, which contains the IMDb rating for each movie with a value ranging from 0 to 10 - how American and non-American films are rated by the spectators. The statistics do not reveal any preferences related to the production country of the movies. US produced, partially US-produced, and non-US produced movies all have similar mean, median, and standard deviation with ratings located around 6. The histogram  for the average IMDb rating for US-only produced movies follows a normal distribution. On the contrary, the average IMDb rating for partially US-produced and  non-US produced movies are slightly right skewed. Hmmm… the conspiracy theory starts losing its apparent importance. If the spectator does not let himself influence in his preferences for American movies, then where is the hypothesized influence of the US?  But wait. We can’t yet draw any conclusions from these first statistics.  </p>
-             <img src="img/gifs/conspiracy.gif" class="img-responsive img-centered" alt="other" width="350" height="300">
+              <h5 style="margin-top: 10px;margin-bottom: -28px;"> Adactylous team trying to draw valid conclusions</h5>
+              <img src="img/gifs/conspiracy.gif" class="img-responsive img-centered" alt="other" width="300" height="300">
              <p>The influence of America might depend on several aspects, as for example the culture of the spectator. For instance, in Sydney, audiences generally prefer American films over locally produced movies. So stay tuned, we’re not yet at the end of the exploration of the concerned research question. 
              </p>
-             <img src="img/movies/movies_boxoffice_timeseries.png" class="img-responsive img-centered" alt=other  width="1000" height="1000" > <!-- image when clicking on the link -->
-             <p>Let’s again have a closer look at the development of the yearly box office revenues of movies produced in the US compared to movies from other production countries. The plot on the left shows that the average box office revenue of American movies is higher than the one of movies produced outside the US. However, it seems that there is an exception in the 70es where movies from the rest of the world have in average an importantly bigger box office revenue than American movies. This matches with the decrease in movie production in the 70’s observed in the histogramme above.</p>
-             <p> Starting from the 80s, American movies took over the lead again and the average box office revenue has increased until today. But so does the error (filled plots) which reminds us that a few very successful American movies increase the mean considerably. The right plot indicates that the box office revenue of partially-American produced movies develops similarly to strictly-American produced movies, although the coproductions overtop the american movies from time to time with some fluctuation. However, since 2000, it seems that producing a film only partially in the US is beneficial in terms of yearly average box office revenues. This can be explained by the fact that nowadays, movies are generally not only produced in one country since many virtual effects companies are taking contracts worldwide. Furthermore, it might be cheaper to produce movies partially out of the US because of cheaper labor.</p>
-            
-             
             <!-- Language translation -->
             <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 10px; margin-top: 50px;">
               <img src="img/four.png" class="img-responsive img-left" alt="other" width="100" height="100">
               <h2 style="font-size: 40px; color: #000; margin-top:-30px;">Languages and translations</h2>
             </div>
             
-            <p>Now, let’s recall that the availability of movies in commonly spoken languages is important for their success. Therefore, this section is dedicated to the languages in which movies are translated. How are the US using translations to export their movies and spread their culture?</p>
+            <p>Now, let’s recall that the availability of movies in commonly spoken languages is important for their success [2]. Therefore, this section is dedicated to the languages in which movies are translated. How are the US using translations to export their movies and spread their culture?</p>
           
              <!-- Changer ca  -->
-             <img src="img/movies/piechart_languages.png" class="img-responsive img-centered" alt="other" width="650" height="600">
+             <img src="img/movies/piechart_languages.png" class="img-responsive img-centered" alt="other" width="700" height="650">
             
             <p>We observe on the figure above that 50% of the movies are available in English. Assuming that most of American people only speak fluently English, that means that "only" half of the produced movies are accessible to this population. 
               Let’s also recall that not everybody is fluent in English even though it is the international language. For instance, China, 18% of the population of this planet, is ranked #82 in the Education English First Proficiency Index. 
@@ -121,12 +124,12 @@
               Hence, we could be wondering if a movie available in English generates more money than a movie not available in English? The plot below reveals that the box office revenue is significantly higher for movies available in English compared to those without (p-value = 4.1e-10). However, that does not yet mean that there is a causality relation. 
             </p>
             <!-- LA MANQUE -->
-           <img src="img/movies/boxplot_ENGLISH_and_BOXOFFICE.png" class="img-responsive img-centered" alt="other" width="600" height="600">
+           <img src="img/movies/boxplot_english_boxoffice.png" class="img-responsive img-centered" alt="other" width="600" height="700">
             <p>Now focusing on the movies produced strictly by the US, to what extend are they exported abroad ? Is it genre-dependent ?
               To answer these questions, the movies were grouped by genre and the number of translations of the movies were summed up.
               The plot below shows the top 10 of the genres cumulating the most translations among US movies, and the corresponding number of translations for movies partially produced by the US.
             </p>
-            <img src="img/movies/drama_US_translations.png"class="img-responsive img-centered" width="600" height="550"></img>
+            <img src="img/movies/drama_US_translations.png"class="img-responsive img-centered" width="700" height="600"></img>
             <p>As the plot reveals, the genre “drama” contains the most US movies translated to other languages. The partially US-produced movies don’t follow the same trend even though the 2 most translated genres are the same for both strictly and partially US-produced movies. Assuming that translation numbers are related to the export of movies, one can deduce from this plot that US drama movies are by far the most exported (and maybe appreciated!) genre worldwide and thus, the US spread their culture through the export of these movies. Wow, this finding introduces some new spice to our conspiracy theory!
             </p>
 
@@ -205,16 +208,16 @@
           <p>After evaluating the performance of the model with a dataset containing the IMDb ratings, the predictions were carried out with an extended dataset. This dataset still contains all the features needed for prediction with no NaN values, but does not necessarily contain the IMDb ratings. This extended dataset contains ~ 8 000 movies, which is way higher than the dataset used for training.
           </p>
           <p>Now, we can calculate the MSI for all the movies in the dataset, which contain the chosen input features but have no IMDb rating available. The plot below shows the distribution of the predicted MSI for all the movies in the dataset containing the necessary features. The predictions did not generate any outliers.</p>
-           <img src="img/movies/MSI_distribution.png"class="img-responsive img-centered" width="750" height="550"></iframe>
+         <img src="img/movies/MSI_distribution.png"class="img-responsive img-centered" width="750" height="50"></iframe>
            <p>The MSI of the extended dataset follows a very slightly right skewed, showing that some movies still tends be more popular.
             But keeping in mind our initial question, is there a difference in MSI between the US-produced movies and the movies produced outside of the US? Let’s check: A t-test puts into evidence that in contrast to what we have seen until now, movies produced outside the US are significantly more successful according to MSI with a p-value of 1.1e-32. This surprising result could be explained that the US are producing lots of movies as seen before and that lots of poor-quality movies are produced, pulling the mean MSI.
-            The timeline below shows the development of the predicted MSI in time. This timeline is consistent with the previous results: in the 70’s, the movies produced outside the US are quite likely to have a MSI superior to the US movies. The trend in the beginning of the timeline is not clear since very few movies outside of the US (in the rest of the world) were produced at that time. Furthermore, the timeline reveals that especially in recent years, the popularity of American movies seems to decline. Interesting. Is this weakening the conspiracy theory that the US is influencing the world importantly?
-             For all the sceptics, we jump to the next component of our analysis: the careers of actors and actresses.
             </p>
-            <img src="img/movies/MSI_boxplot.png" class="img-responsive img-centered" width="700" height="750"></img>
-            <!-- MISSING ELEMENT : DISTRIBUTION MSI OVER TIME  WHOLE DATASET  -->
-            <img src="img/movies/MSI_timeseries.png"class="img-responsive img-centered" width="600" height="450"></img>
-            <p> So, what’s the verdict? The U.S. has been the boss of the global cinema club for a while now, cashing in on big box office hits, pumping out movies faster than popcorn machines at a premiere, and translating them in every language imaginable. But here’s the twist: our MSI analysis shows that non-U.S. movies are catching up. Turns out, being the loudest in the room doesn’t mean you’ll stay the most loved forever, and with global co-productions rising and international hits gaining ground, the U.S. might need to keep its scripts sharp to stay top billing.
+            <img src="img/movies/MSI_boxplot.png" class="img-responsive img-centered" width="1000" height="850"></img>
+            <p> The timeline below shows the development of the predicted MSI in time. This timeline is consistent with the previous results: in the 70’s, the movies produced outside the US are quite likely to have a MSI superior to the US movies. The trend in the beginning of the timeline is not clear since very few movies outside of the US (in the rest of the world) were produced at that time. Furthermore, the timeline reveals that especially in recent years, the popularity of American movies seems to decline. Interesting. Is this weakening the conspiracy theory that the US is influencing the world importantly?
+              For all the sceptics, we jump to the next component of our analysis: the careers of actors and actresses.</p>
+           <!-- MISSING ELEMENT : DISTRIBUTION MSI OVER TIME  WHOLE DATASET  -->
+            <img src="img/movies/MSI_timeseries.png"class="img-responsive img-centered" width="500" height="450"></img>
+            <p> <b>So, what’s the verdict? </b>The U.S. has been the boss of the global cinema club for a while now, cashing in on big box office hits, pumping out movies faster than popcorn machines at a premiere, and translating them in every language imaginable. But here’s the twist: our MSI analysis shows that non-U.S. movies are catching up. Turns out, being the loudest in the room doesn’t mean you’ll stay the most loved forever, and with global co-productions rising and international hits gaining ground, the U.S. might need to keep its scripts sharp to stay top billing.
             </p>
           </div>
             <button type="button" class="btn btn-default" data-dismiss="modal" style="margin-top: 15px;"><i class="fa fa-times"></i> Close</button>
@@ -255,9 +258,10 @@
             </ul>
           </div>
           <div class="col-lg-12 text-justify">
-          <p> A country’s influence in the cinema industry is not only seen through filmmaking or cast, but also, through movie plots. Often forgotten, this aspect might actually be the greatest source of influence in cinema. You often don’t remark the movie origin or the actors’ nationalities, but what you do see is the film, and with it the plot put to life. You remember the love life of Scarlett O’Hara during the American civil war, the New York of West Side Story or the famous 5$ milkshakes in Pulp Fiction… In fact, the narratives portrayed in cinema play a significant role in shaping and perpetuating the myth of the "American way of life". </p>
+          <p> A country’s influence in the cinema industry is not only seen through filmmaking or cast, but also, through movie plots. Often forgotten, this aspect might actually be the greatest source of influence in cinema [4]. You often don’t remark the movie origin or the actors’ nationalities, but what you do see is the film, and with it the plot put to life. You remember the love life of Scarlett O’Hara during the American civil war, the New York of West Side Story or the famous 5$ milkshakes in Pulp Fiction… In fact, the narratives portrayed in cinema play a significant role in shaping and perpetuating the myth of the "American way of life". </p>
           <p>To analyze the role of the USA in movies, we will take a closer look at synopses. Shorter to interpret than full movie scripts, synopses are still retaining the main traits of the movies they depict. Indeed, synopsis summarize film content since the early days, to attract viewers to the silver screens. For us customers, synopses are also an efficient tool to choose the right film. Without them, we’d have to rely on the film poster and the movie name, and God knows where we would end. 
           </p>
+          <h5 style="margin-top: 10px;margin-bottom: -28px;"> Noooo, not the Shining </h5>
           <img src="img/plots/shining.gif" class="img-responsive img-centered" alt="other" width="350" height="200">
           <p>So, we thought we’d analyze the plot summaries of 42,208 movies (!!!!) - the same we analyzed in Movies - to understand if we can see any difference depending on the movie origin. Let's get started before the Shining eats us...</p>
             <!-- Basic stats -->
@@ -314,6 +318,7 @@
              <p>As the simple statistics were not conclusive, let’s look at the synopsis length repartition, a better option for skewed data. Those repartitions are shown above, following as always the movies origins. </p>
             <p> Well, nothing more enlightening here it seems :(. As expected, very few movie summaries have less than 20 words and more than 2000 - a behaviour shared across all origins. Movie produced only the United States have 7% more synopses over 500 words, compared to non-US ones. But, still, partially-US movies distinguish with the longest synopses, over 500 words, as presented before. </p>
             <p>Therefore, we see a difference in synopses following movie origin, but we cannot state on the actual impact of America in synopses by this sole analysis. Prepare your shovels, we are gonna dig hard…</p>  
+            <h5 style="margin-top: 10px;margin-bottom: -28px;"> Artistic view of the Adactylous team working </h5>
             <img src="img/plots/holes.gif" class="img-responsive img-centered" alt="other" width="300" height="300">
           </div>
         <!-- USA in synopsis -->
@@ -324,15 +329,16 @@
            </div>
           <!-- USA IN SYNOPSIS -->
               <p>Being very frustrated with the previous outputs, we bring out the big guns, aka. the Natural Language Processing toolbox. So, we will process each summary and check out for two interesting things : 1. Locations and 2. Words depicting the USA and their culture. It's basically honey for bees here...so if we cannot catch the US influence with those two, well it’s probably that the US influence is not as omnipresent as they’d like us to believe…Sorry US buddies, I know it hurts.</p>
+              <h5 style="margin-top: 10px;margin-bottom: -28px;"> The outraged US population hearing from Adactylous team </h5>
               <img src="img/gifs/shocked.gif" class="img-responsive img-centered" alt="other" width="200" height="200">    
-                <h3> US locations in synopsis </h3>
+                <h3 style="margin-top: 20px;"> US locations in synopsis </h3>
                  <p>Ok, so,  to assess the presence of the USA in movie summaries, what better thing than calculating the proportion of US geopolitical entities (GPE) -relative to all other locations found - in each synopsis. Clear as crystal isn’t it ?!
                 </p>
                 <p>But, wait a sec, how does my algo identify locations ? An accurate one I mean, so that all the Paris Hiltons and Austin Butlers do not accidentally end up as locations… Well, well, well, for this, we have the Transformer NLP processor,  a powerful tool that uses context to retrieve only true locations. Ok, one problem solved.
                 </p>
                 <p>Now, to check if the identified locations are Americans or not, you’d say : “Eazy peazy, prepare a list of the states, counties and main cities of the US and check if your locations correspond”. Ok, but what if the location is not in the list ? And what about London, Cairo, Athens, Utah.. and all those locations that exist both in the United States and elsewhere  ? … …. Nothing ? Well, we have something : Geopy nominatim, a Python extension that outputs the most probable address for a given location. For example, given ‘London’ it outputs ‘London, Greater London, England, United Kingdom’ and some small city in the US. On the contrary, for ‘Utah’, Geopy generates ‘Utah, United States’, like we would have said. Then, we only need to check if the Geopy output contains ‘United States’. Huurrrayy !!!! 
 
-                  After some test, we only identified ‘Palestine’ as being incorrectly classified as a US locations, possibly because it's existence is not recognised all existing countries. But, overall, synopses are short and fast read summaries of a movie, so it’s very unlikely that an ambiguous improbable location is mentioned. So, we are quite satisfied with our solution, slower but more accurate, and we can jump on to the results.
+                  After some test, we only identified ‘Palestine’ as being incorrectly classified as a US locations, possibly because it's existence is not recognised all UN countries. But, overall, synopses are short and fast read summaries of a movie, so it’s very unlikely that an ambiguous improbable location is mentioned. So, we are quite satisfied with our solution, slower but more accurate, and we can jump on to the results.
                 </p>
                 <!-- METTRE TABLE ICI -->
                 <table class="custom-table">
@@ -386,10 +392,11 @@
                 <p>Locations are a good tool to check if a lot of movies were clearly mentioning the USA in their synopses. But, cultural influence is usually much more powerful than that. Think cookies for example, a typical American word that we use daily without clearly mentioning or even thinking about the US. This more discreet effect is what we want to investigate now.</p>
                 <p>For this study, we confide in ChatGPT to output a list of 200 words representing American culture. Indeed, no database is available on such  a specific matter and machine learning techniques were considered out-of-scope here. Rather than making our own list of words, bearing a huuuge bias, we preferred generating a list using an artificial intelligence tool that has actually seen thousands of texts related to American culture. We keep in mind that a bias is probably present too, but we estimated it was much lower than ours. In addition, we are also conscious about the relatively small size of the list supposed to "capture" the American culture. Hopefully the American culture is richer than those 200 words but time processing constraints restricted the list size. 
                   The words included a variety of references, from food (“milkshake”, “burger”...) to  brands (“harley davidson”, “cadillac”..), events (“homecoming”, “election”, “state fair”), values, famous people.... 
-                  
-                  Similarly as for the GPEs, we calculated the percentage of American culture, here using the proprotion between the number of words present in the list of 200 American words and the total number of words per summary. 
                 </p>
+                <h5 style="margin-top: 10px;margin-bottom: -28px;"> The US in four symbols, since ChatGPT</h5>
                 <img src="img/plots/usa-lexicon.jpg"  class="img-responsive img-centered" alt="other" width="300" height="300" >
+                <p> Similarly as for the GPEs, we calculated the percentage of American culture, here using the proprotion between the number of words present in the list of 200 American words and the total number of words per summary. 
+                </p>
                 <img src="img/plots/summaries_distribution_lexicon.png" class="img-responsive img-centered" alt="other" width="850" height="750">
                  <p>Contrary to the GPEs, the American words are presenting a normal distribution (less obvious for the partially-US movies though). More precisely, it appears 36.16% of US-only movies, 36.15% of partially-US movies and only 17.21% of foreign synopses exhibit at least 1 word from the American culture list. As the list also contains generic words like “president” or “motorcycle club”, other statistics may be more relevant. 
                 </p>
@@ -432,6 +439,9 @@
                 <img src="img/plots/summaries_timeseries_lexicon.png" class="img-responsive img-centered" alt="other" width="1100" height="750">
                 <p> Interestingly, the presence of American culture for the three types of movie origins has not evolved much over time. Foreign movies have always used the least American words, especially between 1920 and 2015. Therefore, the worldwide American influence has not increased since 1920, or, is not traduced by movie synopses. For the partially-American movies, the percentage of American culture has increased since 1945, to reach nearly US-only levels. The trend can be explained by the increased importance of partially-American movies, in exponential growth since the 1940s, or by a greater influence of the USA over time. Probably both actually…
                 </p>
+                <h5 style="margin-top: 10px;margin-bottom: -28px;"> Gooooo USA</h5>
+                <img src="img/gifs/go-usa.gif" class="img-responsive img-centered" alt="other" width="350" height="200">
+          
                 <p style="margin-top: 10px;"> <b>So, how much of Hollywood’s soft power shows up in movie plot summaries? </b> Turns out, America is all over the map (literally). By counting the mentions of US geopolitical entities in the summaries, we uncovered how often stories wander through New York or take a ride to Texas. It’s like America can’t resist stamping its cultural passport everywhere. As for our investigation on iconic “American words” like Thanksgiving or McDonald’s? Less successful. Our 200-word lexicon didn’t quite cut it—probably because America’s influence isn’t limited to apple pies and baseball (shocking, I know).
                   Moral of the story? If you want to measure cultural takeover, follow the locations’ names. And if you want to flex a truly star-spangled lexicon, bring a bigger dictionary (and a better computer).
                   </p>
@@ -474,7 +484,7 @@
             </ul>
             <div class="col-lg-12 text-justify">
             <!--<p> <span style="font-size: 48px;">📽️🎬 🎥 🎞️ </span> BLANK TEXT TO CHANGE  </p> -->
-            <p>Many actors and actresses have had more or less successful careers in their lifetime. In fact, the CMU dataset contains information on more than 450 000 actors and actresses. But probably just a few of them are known on a larger scale. Are the known ones Americans or actors playing in American films? To understand, to what extent the US influences the global cinema industry (and thus maybe our minds… ATTENTION ATTENTION), the following analysis is dedicated to the career of American actors and actresses compared to the non-American ones. 
+            <p>Many actors and actresses have had more or less successful careers in their lifetime. In fact, the CMU dataset contains information on more than 450 000 actors and actresses [1]. But probably just a few of them are known on a larger scale. Are the known ones Americans or actors playing in American films? To understand, to what extent the US influences the global cinema industry (and thus maybe our minds… ATTENTION ATTENTION), the following analysis is dedicated to the career of American actors and actresses compared to the non-American ones. 
             </p>
             </div>
             <!-- Actors nationalities -->
@@ -522,8 +532,9 @@
               </p>
               <p>For foreign women, films with lower box office revenue dominate across all age groups older than 20, contrasting with men. This trend does not hold for American actors, where men only appear slightly more often in higher-revenue films in the 10–69 age range.
               </p>
-              <p>For both nationalities, the oldest actors see very high revenues. These anomalies may stem from the small number of older actors, who are likely skilled performers cast in successful films. Highly successful actors are also more likely to remain in the industry later in life than their less successful counterparts."</p>
               <img src="img/actors/actors_box_office_gender.png" class="img-responsive img-centered" alt="other" width="1000" height="700">
+              <p>For both nationalities, the oldest actors see very high revenues. These anomalies may stem from the small number of older actors, who are likely skilled performers cast in successful films. Highly successful actors are also more likely to remain in the industry later in life than their less successful counterparts.</p>
+              
               </div>
               <div class="col-lg-12 text-right">
                 <div style="display: flex; align-items: center; justify-content: center;margin-bottom: -40px; margin-top: 25px">
@@ -540,6 +551,7 @@
               <p>To answer our question, we then looked at the percentage of actors acting in a movie before this age and we confirmed that US actors are more inclined to having an early career in all movie producing countries, with a significant difference in US only produced movies (9.14% of US actors vs 4.5% of foreign actors having an early career). The box office trend by actor age (Fig) also suggests that these early birds also get the best movies if they are American! To understand whether early careers actually helped US actors in kicking off their careers, we did a further analysis by computing the correlation coefficients between the age at the first movie and the total number of movies for each actor. </p>
               <img src="img/actors/actors_box_office_age.png" class="img-responsive img-centered" alt="other" width="600" height="600">
               <p> We obtained in both cases negative correlation coefficients, meaning that an earlier starting is indeed related to a richer career in terms of number of movies played.</p>
+              <h5 style="margin-top: 10px;margin-bottom: -28px;"> The 10-years old kid actors, more famous than you'll ever be</h5>
               <img src="img/gifs/young-actor.gif" class="img-responsive img-centered" alt="other" width="400" height="300">
               </div>
               <div class="col-lg-12 text-justify">
@@ -635,12 +647,13 @@
                 </tr>
               </table>
               <p> </p>
-              <img src="img/actors/actors_violin_plot_prediction.png" class="img-responsive img-centered" alt="other" width="600" height="550">
-              <p> We can immediately give a look at the variables that most influence the success of an actor: the career length, the age at first movie, and being a man…but negatively!
+               <p> We can immediately give a look at the variables that most influence the success of an actor: the career length, the age at first movie, and being a man…but negatively!
                 The same model is then used to make predictions on the full dataframe. The average index was 0.72 for US actors and 0.47 for the non-US. The distributions of the classification can be visualised in the violin plot. We can state that the Americans hold again the podium of success. And it seems like this time there is not much hope for the others! While the distributions for the class 0 is really similar for the two groups, Americans prevail in the other three and more important classes, with a clear win in class 3. Evidently, Hollywood really have a special regard for its blue-white-and-red stars!
                 </p>
-              <img src="img/gifs/wall-street.gif" class="img-responsive img-centered" alt="other" width="400" height="350">
+                <img src="img/actors/actors_violin_plot_prediction.png" class="img-responsive img-centered" alt="other" width="600" height="550">
               <p style="margin-top: 10px;"> <b>So, who dominates the silver screen, Americans or foreign actors? </b> Drumroll, please... unsurprisingly, Hollywood loves its own! US actors score higher on the Success Index, snagging more Golden Globes, starring in bigger box office hits, and kicking off their careers earlier. Meanwhile, foreign actors shine, but often in fleeting roles (hello, "The One-Hit Wonder" club). Still, when they manage to break into the US market, their careers often see a boost. The data doesn't lie: acting in a US film can be a golden ticket.</p>
+              <h5 style="margin-top: 10px;margin-bottom: -28px;"> Congrats dude, you now know the secrets of actors success </h5>
+              <img src="img/gifs/wall-street.gif" class="img-responsive img-centered" alt="other" width="400" height="350">
               <p>The key to success? Start young, land a long career, and, ideally, be cast in a US movie.
               </p>
             </div>
