@@ -109,14 +109,10 @@
             </div>
             
             <p>Now, let’s recall that the availability of movies in commonly spoken languages is important for their success. Therefore, this section is dedicated to the languages in which movies are translated. How are the US using translations to export their movies and spread their culture?</p>
-            
-            
-            
-            
-            <iframe src="img/movies/interactive_languages.html" class="centered-iframe" scrolling="yes" width="800" height="8000" style="transform: scale(0.8); transform-origin: 0 0; border: none; overflow: auto;"></iframe>
-            
-            
-            
+          
+             <!-- Changer ca  -->
+            <iframe src="img/movies/interactive_languages.html" class="centered-iframe" scrolling="yes" width="600" height="600" ></iframe>
+
             <p>We observe on the figure above that 50% of the movies are available in English. Assuming that most of American people only speak fluently English, that means that "only" half of the produced movies are accessible to this population. 
               Let’s also recall that not everybody is fluent in English even though it is the international language. For instance, China, 18% of the population of this planet, is ranked #82 in the Education English First Proficiency Index. 
             </p>
@@ -337,6 +333,39 @@
                   After some test, we only identified ‘Palestine’ as being incorrectly classified as a US locations, possibly because it's existence is not recognised worldwide. But, overall, synopses are short and fast read summaries of a movie, so it’s very unlikely that an ambiguous improbable location is mentioned. So, we are quite satisfied with our solution, slower but more accurate, and we can jump on to the results.
                 </p>
                 <!-- METTRE TABLE ICI -->
+                <table class="custom-table">
+                  <tr>
+                    <th style="width:200px;"> Metrics 
+                      (all for the proportion of GPE - in %) </th>
+                    <th>US-only produced</th>
+                    <th>Partially US-produced</th>
+                    <th>Non US produced (RoW) </th>
+                  </tr>
+                  <tr>
+                    <td>Median</td>
+                    <td>0.00</td>
+                    <td>0.00</td>  
+                    <td>0.00</td>
+                  </tr>
+                  <tr>
+                    <td>Mean </td>
+                    <td>36.72</td>
+                    <td>27.61</td>
+                    <td>4.80</td>
+                  </tr>
+                  <tr>
+                    <td >Maximum </td>
+                    <td>100.00</td>
+                    <td>100.00</td>
+                    <td>100.00</td>
+                  </tr>
+                  <tr>
+                    <td >Minimum</td>
+                    <td>0.00</td>
+                    <td>0.00</td>  
+                    <td>0.00</td>
+                  </tr>
+                </table>
                 <p>Looking at the basic statistics on the percentages of American culture, we see that the median is zero,  for all production types. This unusual result just means that a lot of movies don't contain any US locations in their plot summaries. But caution, this result also includes the synopses where no existing location was mentioned ! Think about dystopias like “Hunger Games” or science fictions like “Star Wars”...
                 </p>
                 <p>Now, looking at the means, we can notice that US-only produced movies show the highest percentage of American culture with 36.7 %. This means that movies produced in the US tend on average to tell a story that takes place at least partially in the US. Next, the partially US-produced movies show on average a percentage of American locations of 27 %, that means 9 % less American locations compared to US-only produced movies. And, for movies produced outside of the US, this proportion is even lower : 4.8 % of American locations only, so around 9 times less than US-only movies and 7 times less than the partially-US ones. So, we have a trend !!! Isn’t that great ?!! OK, let’s keep calm, by looking at the distributions, but sometimes you see, basic stats do not give you the whole picture. All the more that, the standard deviation is important, probably because of the “small number bias”. Indeed, among all words in synopses, only a fraction are locations and even less American ones, easily skewing the stats. 
@@ -352,17 +381,93 @@
               </div>
               <div class="col-lg-12 text-justify">
                 <h3> American culture in synopsis  </h3>
-                <p>Locations were a good tool to check if a lot of movies were clearly mentioning the USA in the synopses. But, cultural influence is usually much more powerful than that. Think cookies for example, a typical American word that we use daily without clearly mentioning or even thinking about the US. This more discreet effect is what we want to investigate now.</p>
+                <p>Locations are a good tool to check if a lot of movies were clearly mentioning the USA in their synopses. But, cultural influence is usually much more powerful than that. Think cookies for example, a typical American word that we use daily without clearly mentioning or even thinking about the US. This more discreet effect is what we want to investigate now.</p>
                 <p>For this study, we confide in Chat-GPT to output a list of 200 words representing American culture. Indeed, no database is available on such  a specific matter and machine learning techniques were considered out-of-scope here. Rather than making our own list of words, bearing a huuuge bias, we preferred generating a list using an artificial intelligence tool that has actually seen thousands of texts related to American culture. We keep in mind that a bias is probably present too, but we estimated it was much lower than ours. In addition, we are also conscious about the relatively small size of the list supposed to "capture" the American culture. Hopefully the American culture is richer than those 200 words but time processing constraints restricted the list size. 
-                  The words included a variety of references, from food (“milkshake”, “burger”...) to  brands (“harley davidson”, “cadillac”..), events (“homecoming”, “election”, “state fair”), values, famous people.... Similarly as for the GPE, we calculated the proportion of American culture, by counting the number of words present in the list of 200 American words relative to the total number of words per summary. 
+                  The words included a variety of references, from food (“milkshake”, “burger”...) to  brands (“harley davidson”, “cadillac”..), events (“homecoming”, “election”, “state fair”), values, famous people.... 
+                  
+                  Similarly as for the GPEs, we calculated the percentage of American culture, here using the proprotion between the number of words present in the list of 200 American words and the total number of words per summary. 
                 </p>
                 <img src="img/plots/macdo.jpg" width="10%">
-
-                <img src="img/plots/summaries_distribution_lexicon.png" class="img-responsive img-centered" alt="other" width="600" height="600">
-                <img src="img/plots/summaries_timeseries_lexicon.png" class="img-responsive img-centered" alt="other" width="600" height="600">
+                <table class="custom-table">
+                  <tr>
+                    <th style="width:200px;"> Metrics 
+                      (all for the proportion of GPE - in %) </th>
+                    <th>US-only produced</th>
+                    <th>Partially US-produced</th>
+                    <th>Non US produced (RoW) </th>
+                  </tr>
+                  <tr>
+                    <td>Median</td>
+                    <td>0.00</td>
+                    <td>0.00</td>  
+                    <td>0.00</td>
+                  </tr>
+                  <tr>
+                    <td>Mean </td>
+                    <td>36.72</td>
+                    <td>27.61</td>
+                    <td>4.80</td>
+                  </tr>
+                  <tr>
+                    <td >Maximum </td>
+                    <td>100.00</td>
+                    <td>100.00</td>
+                    <td>100.00</td>
+                  </tr>
+                  <tr>
+                    <td >Minimum</td>
+                    <td>0.00</td>
+                    <td>0.00</td>  
+                    <td>0.00</td>
+                  </tr>
+                </table>
+                
+                <img src="img/plots/summaries_distribution_lexicon.png" class="img-responsive img-centered" alt="other" width="850" height="750">
+                 <p>Contrary to the GPEs, the American words are presenting a normal distribution (less obvious for the partially-US movies though). More precisely, it appears 36.16% of US-only movies, 36.15% of partially-US movies and only 17.21% of foreign synopses exhibit at least 1 word from the American culture list. As the list also contains generic words like “president” or “motorcycle club”, other statistics may be more relevant. 
+                </p>
+                <p>By looking at the mean and median, we observe both are close to 0, explaining the normal distribution. These very low values can be explained similarly as for the American locations, with a lot of synopses not containing any word from the lexicon. The maximum value is also much lower, because the total number of words per synopsis is much larger than the total number of locations per synopsis. Therefore, the percentage of American culture also suffers from this “small number bias”. 
+                </p>
+                <table class="custom-table">
+                  <tr>
+                    <th style="width:200px;"> Metrics 
+                      (all for the proportion of American culture - in % words) </th>
+                    <th>US-only produced</th>
+                    <th>Partially US-produced</th>
+                    <th>Non US produced (RoW) </th>
+                  </tr>
+                  <tr>
+                    <td>Median</td>
+                    <td>0.00</td>
+                    <td>0.00</td>  
+                    <td>0.00</td>
+                  </tr>
+                  <tr>
+                    <td>Mean </td>
+                    <td>0.59</td>
+                    <td>0.41</td>
+                    <td>0.25</td>
+                  </tr>
+                  <tr>
+                    <td >Maximum </td>
+                    <td>20.00</td>
+                    <td>12.50</td>
+                    <td>15.00</td>
+                  </tr>
+                  <tr>
+                    <td >Minimum</td>
+                    <td>0.00</td>
+                    <td>0.00</td>  
+                    <td>0.00</td>
+                  </tr>
+                </table>
+                <p>But, what’s important is to note that American culture is more present in US-only movies (higher max and higher mean) than in partially-US, and in even more than in foreign movies. So, foreign movies use words related to American culture to describe their movies, but to an extent that seems negligible (on average 0.25% American words per summary).</p>
+                <img src="img/plots/summaries_timeseries_lexicon.png" class="img-responsive img-centered" alt="other" width="1100" height="750">
+                <p> Interestingly, the presence of American culture for the three types of movie origins has not evolved much over time. Foreign movies have always used the least American words, especially between 1920 and 2015. Therefore, the worldwide American influence has not increased since 1920, or, is not traduced by movie synopses. For the partially-American movies, the percentage of American culture has increased since 1945, to reach nearly US-only levels. The trend can be explained by the increased importance of partially-American movies, in exponential growth since the 1940s, or by a greater influence of the USA over time. Probably both actually…
+                </p>
               </div>
-
+              <div class="col-lg-12 text-center"> 
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+              </div>
           </div>
         </div>
       </div>
